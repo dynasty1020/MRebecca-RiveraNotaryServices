@@ -3,55 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Notary Public | North Carolina | Evenings &amp; Weekends</title>
-    <meta name="description" content="Commissioned North Carolina mobile notary. Evening and weekend appointments at your home, hospital, care facility, or office. State-capped fees.">
+    <title>M. Rebecca Rivera Notary Services | Mobile Notary in North Carolina</title>
+    <meta name="description" content="Friendly mobile notary in North Carolina. Evening and weekend visits to your home, hospital, care facility, or office. State-set fees.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Dancing+Script:wght@600&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script>
         if (window.tailwind) tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        navy: { 800: '#1b2a4a', 900: '#0f172a', 950: '#0a0f1d' },
-                        gold: { 500: '#c59b27', 600: '#a37f1e' }
+                        cream: '#FBF7F2',
+                        petal: { 50: '#FDF5F4', 100: '#F8E6E4', 200: '#F1CFCB', 400: '#D9939B', 600: '#9E4F5C', 700: '#863F4B' },
+                        leaf:  { 50: '#F2F6F0', 100: '#E3ECE0', 300: '#A9BFA5', 500: '#7D9A79', 700: '#4F6B53' },
+                        plum:  { 600: '#6B5A5E', 700: '#5A4247', 800: '#4A3338', 900: '#3B2A2F' },
+                        line:  '#9C8A8D',
+                        hair:  '#EADFDB'
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Merriweather', 'serif']
+                        sans: ['"Nunito Sans"', 'system-ui', 'sans-serif'],
+                        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+                        script: ['"Dancing Script"', 'cursive']
                     }
                 }
             }
         }
     </script>
+    <style>
+        .petal-input { width: 100%; background: #fff; border: 1px solid #9C8A8D; border-radius: 0.875rem; padding: 0.75rem 1rem; font-size: 0.95rem; color: #3B2A2F; }
+        .petal-input:focus { outline: none; border-color: #9E4F5C; box-shadow: 0 0 0 3px rgba(158, 79, 92, 0.2); }
+        .petal-label { display: block; font-size: 0.85rem; font-weight: 700; color: #4A3338; margin-bottom: 0.4rem; }
+        .flourish { display: block; margin: 0 auto; }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-navy-800 selection:text-white">
+<body class="bg-cream text-plum-900 font-sans antialiased selection:bg-petal-200 selection:text-plum-900">
 
     <!--
     ================================================================
       EDIT HER DETAILS IN ONE PLACE: the CONFIG block near the bottom
       of this file (search for "const CONFIG"). Name, phone, email,
-      hours, service area, mileage rate and the form's web address
-      all live there and fill in across the whole page.
+      hours, service area, photo, mileage rate and the form's web
+      address all live there and fill in across the whole page.
     ================================================================
     -->
 
+    <!-- Reusable floral drawings (decorative) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <defs>
+            <symbol id="blossom" viewBox="-20 -20 40 40">
+                <ellipse cx="0" cy="-9" rx="6.5" ry="9.5" fill="currentColor"/>
+                <ellipse cx="0" cy="-9" rx="6.5" ry="9.5" fill="currentColor" transform="rotate(72)"/>
+                <ellipse cx="0" cy="-9" rx="6.5" ry="9.5" fill="currentColor" transform="rotate(144)"/>
+                <ellipse cx="0" cy="-9" rx="6.5" ry="9.5" fill="currentColor" transform="rotate(216)"/>
+                <ellipse cx="0" cy="-9" rx="6.5" ry="9.5" fill="currentColor" transform="rotate(288)"/>
+                <circle r="4.5" fill="#E9C27D"/>
+                <circle r="1.6" fill="#C99A4E"/>
+            </symbol>
+            <symbol id="sprig" viewBox="0 0 240 140">
+                <path d="M8 132 C60 112 108 84 148 46 C170 24 196 12 232 10" fill="none" stroke="#7D9A79" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M100 82 C104 64 112 54 124 48" fill="none" stroke="#7D9A79" stroke-width="2" stroke-linecap="round"/>
+                <ellipse cx="42" cy="112" rx="17" ry="6.5" fill="#A9BFA5" transform="rotate(-35 42 112)"/>
+                <ellipse cx="60" cy="126" rx="15" ry="6" fill="#BCCDB8" transform="rotate(14 60 126)"/>
+                <ellipse cx="88" cy="90" rx="17" ry="6.5" fill="#A9BFA5" transform="rotate(-58 88 90)"/>
+                <ellipse cx="110" cy="100" rx="15" ry="6" fill="#BCCDB8" transform="rotate(6 110 100)"/>
+                <ellipse cx="166" cy="50" rx="15" ry="6" fill="#BCCDB8" transform="rotate(28 166 50)"/>
+                <ellipse cx="186" cy="16" rx="15" ry="6" fill="#A9BFA5" transform="rotate(-22 186 16)"/>
+                <use href="#blossom" x="128" y="34" width="34" height="34" style="color:#E8A9B0"/>
+                <use href="#blossom" x="216" y="-6" width="30" height="30" style="color:#F1CFCB"/>
+                <use href="#blossom" x="62" y="96" width="22" height="22" style="color:#F1CFCB"/>
+                <circle cx="150" cy="22" r="4" fill="#D9939B"/>
+                <circle cx="30" cy="124" r="3" fill="#E8A9B0"/>
+            </symbol>
+            <symbol id="divider" viewBox="0 0 200 40">
+                <path d="M10 22 C50 22 70 10 100 20 C130 10 150 22 190 22" fill="none" stroke="#A9BFA5" stroke-width="1.8" stroke-linecap="round"/>
+                <ellipse cx="58" cy="16" rx="9" ry="3.5" fill="#BCCDB8" transform="rotate(-20 58 16)"/>
+                <ellipse cx="142" cy="16" rx="9" ry="3.5" fill="#BCCDB8" transform="rotate(20 142 16)"/>
+                <ellipse cx="34" cy="24" rx="8" ry="3" fill="#A9BFA5" transform="rotate(12 34 24)"/>
+                <ellipse cx="166" cy="24" rx="8" ry="3" fill="#A9BFA5" transform="rotate(-12 166 24)"/>
+                <use href="#blossom" x="88" y="6" width="24" height="24" style="color:#E8A9B0"/>
+            </symbol>
+        </defs>
+    </svg>
+
     <!-- Top Bar -->
-    <div class="bg-navy-950 text-slate-300 text-xs sm:text-sm py-2 px-4 border-b border-slate-800">
+    <div class="bg-petal-100 text-plum-800 text-sm py-2 px-4">
         <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
             <div class="flex items-center gap-2">
-                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
-                <span class="font-medium text-slate-200">Commissioned Notary Public &middot; North Carolina</span>
-                <span class="hidden md:inline text-slate-500">|</span>
-                <span class="hidden md:inline">Evenings &amp; weekends by appointment</span>
+                <i class="fa-solid fa-heart text-petal-600 text-xs" aria-hidden="true"></i>
+                <span class="font-semibold">Evenings &amp; weekends &middot; I come to you</span>
             </div>
             <div class="flex items-center gap-6">
-                <a data-tel href="#book" class="hover:text-amber-400 transition flex items-center gap-1.5 font-medium">
+                <a data-tel href="#book" class="hover:text-petal-700 transition flex items-center gap-1.5 font-semibold">
                     <i class="fa-solid fa-phone text-xs" aria-hidden="true"></i> <span data-cfg="phoneDisplay">(000) 000-0000</span>
                 </a>
-                <a data-mailto href="#book" class="hover:text-amber-400 transition flex items-center gap-1.5 font-medium">
+                <a data-mailto href="#book" class="hover:text-petal-700 transition flex items-center gap-1.5 font-semibold">
                     <i class="fa-solid fa-envelope text-xs" aria-hidden="true"></i> Email me
                 </a>
             </div>
@@ -59,105 +106,88 @@
     </div>
 
     <!-- Header -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
+    <header class="sticky top-0 z-50 bg-cream/95 backdrop-blur-md border-b border-hair">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <a href="#top" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center text-xl font-bold shadow-md group-hover:bg-navy-800 transition">
-                    <i class="fa-solid fa-stamp" aria-hidden="true"></i>
-                </div>
-                <div>
-                    <span class="block font-serif text-lg font-bold text-navy-900 leading-tight" data-cfg="ownerName">[Your Name]</span>
-                    <span class="block text-xs text-slate-500 font-medium tracking-wide">Mobile Notary Public &middot; NC</span>
-                </div>
+            <a href="#top" class="flex items-center gap-3">
+                <span class="w-11 h-11 rounded-full bg-petal-100 border border-petal-200 flex items-center justify-center" aria-hidden="true">
+                    <svg width="28" height="28" style="color:#D9939B"><use href="#blossom"/></svg>
+                </span>
+                <span>
+                    <span class="block font-serif text-xl font-bold text-plum-900 leading-tight" data-cfg="ownerName">M. Rebecca Rivera</span>
+                    <span class="block text-xs text-plum-700 font-semibold tracking-wide">Notary Services &middot; North Carolina</span>
+                </span>
             </a>
 
-            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-700" aria-label="Main">
-                <a href="#services" class="hover:text-navy-900 transition">Services</a>
-                <a href="#fee-schedule" class="hover:text-navy-900 transition">Fees</a>
-                <a href="#calculator" class="hover:text-navy-900 transition">Fee Calculator</a>
-                <a href="#about" class="hover:text-navy-900 transition">About</a>
-                <a href="#how-it-works" class="hover:text-navy-900 transition">How It Works</a>
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-plum-800" aria-label="Main">
+                <a href="#services" class="hover:text-petal-700 transition">How I Help</a>
+                <a href="#fee-schedule" class="hover:text-petal-700 transition">Fees</a>
+                <a href="#calculator" class="hover:text-petal-700 transition">Fee Estimator</a>
+                <a href="#about" class="hover:text-petal-700 transition">About Me</a>
+                <a href="#how-it-works" class="hover:text-petal-700 transition">How It Works</a>
             </nav>
 
             <div class="hidden sm:flex items-center gap-3">
-                <a href="#calculator" class="text-xs font-semibold uppercase tracking-wider text-navy-900 border border-navy-900/20 hover:bg-slate-100 px-4 py-2.5 rounded-lg transition">
-                    Estimate Fee
-                </a>
-                <a href="#book" class="bg-navy-900 hover:bg-navy-800 text-amber-400 font-medium text-sm px-5 py-2.5 rounded-lg shadow hover:shadow-md transition flex items-center gap-2">
+                <a href="#book" class="bg-petal-600 hover:bg-petal-700 text-white font-bold text-sm px-5 py-3 rounded-full shadow-sm hover:shadow transition flex items-center gap-2">
                     <i class="fa-regular fa-calendar-check text-xs" aria-hidden="true"></i>
-                    Request Appointment
+                    Request a Visit
                 </a>
             </div>
 
-            <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 rounded-md text-slate-700 hover:bg-slate-100" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 rounded-full text-plum-800 hover:bg-petal-100" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
                 <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
             </button>
         </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
-            <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Services</a>
-            <a href="#fee-schedule" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Fees</a>
-            <a href="#calculator" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Fee Calculator</a>
-            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">About</a>
-            <a href="#how-it-works" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">How It Works</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-cream border-b border-hair px-4 pt-2 pb-6 space-y-2">
+            <a href="#services" class="block px-3 py-2 rounded-xl text-base font-semibold text-plum-800 hover:bg-petal-50">How I Help</a>
+            <a href="#fee-schedule" class="block px-3 py-2 rounded-xl text-base font-semibold text-plum-800 hover:bg-petal-50">Fees</a>
+            <a href="#calculator" class="block px-3 py-2 rounded-xl text-base font-semibold text-plum-800 hover:bg-petal-50">Fee Estimator</a>
+            <a href="#about" class="block px-3 py-2 rounded-xl text-base font-semibold text-plum-800 hover:bg-petal-50">About Me</a>
+            <a href="#how-it-works" class="block px-3 py-2 rounded-xl text-base font-semibold text-plum-800 hover:bg-petal-50">How It Works</a>
             <div class="pt-2 flex flex-col gap-2">
-                <a href="#book" class="w-full text-center bg-navy-900 text-amber-400 font-medium px-4 py-3 rounded-lg shadow">Request Appointment</a>
-                <a data-tel href="#book" class="w-full text-center border border-navy-900/20 text-navy-900 font-medium px-4 py-3 rounded-lg">Call or Text</a>
+                <a href="#book" class="w-full text-center bg-petal-600 text-white font-bold px-4 py-3 rounded-full">Request a Visit</a>
+                <a data-tel href="#book" class="w-full text-center border border-petal-400 text-petal-700 font-bold px-4 py-3 rounded-full">Call or Text</a>
             </div>
         </div>
     </header>
 
     <!-- Hero -->
-    <section id="top" class="relative bg-gradient-to-b from-navy-950 via-navy-900 to-slate-900 text-white py-16 lg:py-24 overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+    <section id="top" class="relative overflow-hidden bg-gradient-to-b from-petal-50 via-cream to-cream py-16 lg:py-24">
+        <!-- soft background shapes -->
+        <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-petal-100 opacity-70 blur-3xl pointer-events-none" aria-hidden="true"></div>
+        <div class="absolute top-40 -right-24 w-80 h-80 rounded-full bg-leaf-100 opacity-70 blur-3xl pointer-events-none" aria-hidden="true"></div>
+        <!-- floral corners -->
+        <svg class="absolute -top-2 right-0 w-48 sm:w-72 lg:w-96 opacity-60 lg:opacity-90 pointer-events-none" viewBox="0 0 240 140" style="transform: scaleX(-1) rotate(180deg)" aria-hidden="true"><use href="#sprig"/></svg>
+        <svg class="absolute bottom-0 -left-6 w-48 sm:w-64 lg:w-80 opacity-50 lg:opacity-80 pointer-events-none" viewBox="0 0 240 140" aria-hidden="true"><use href="#sprig"/></svg>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
 
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-amber-300 text-xs font-semibold uppercase tracking-wider">
-                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
-                        Commissioned North Carolina Notary Public
-                    </div>
+                    <p class="font-script text-3xl sm:text-4xl text-petal-600">Hi, I'm <span data-cfg="greetingName">Rebecca</span>!</p>
 
-                    <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
-                        A Mobile Notary Who Comes to You, Evenings &amp; Weekends
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-plum-900 leading-[1.05]">
+                        Friendly notary help, right where you are
                     </h1>
 
-                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
-                        I travel to homes, hospitals, care facilities, and offices across <span data-cfg="serviceArea">[your service area]</span>, when banks and offices are closed.
+                    <p class="text-plum-700 text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        I'm a commissioned North Carolina notary. I'll come to your home, hospital room, care facility, or office on evenings and weekends, so getting your papers notarized is one less thing to worry about.
                     </p>
 
-                    <div class="pt-2 pb-4 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
-                        <div class="p-3 rounded-lg bg-white/5 border border-white/10">
-                            <i class="fa-solid fa-car text-amber-400 mb-1 text-lg" aria-hidden="true"></i>
-                            <div class="text-xs font-semibold text-white">Mobile</div>
-                            <div class="text-[11px] text-slate-300">I come to you</div>
-                        </div>
-                        <div class="p-3 rounded-lg bg-white/5 border border-white/10">
-                            <i class="fa-solid fa-moon text-amber-400 mb-1 text-lg" aria-hidden="true"></i>
-                            <div class="text-xs font-semibold text-white">After Hours</div>
-                            <div class="text-[11px] text-slate-300">Evenings &amp; weekends</div>
-                        </div>
-                        <div class="p-3 rounded-lg bg-white/5 border border-white/10">
-                            <i class="fa-solid fa-scale-balanced text-amber-400 mb-1 text-lg" aria-hidden="true"></i>
-                            <div class="text-xs font-semibold text-white">State-Set Fees</div>
-                            <div class="text-[11px] text-slate-300">$10 per signature</div>
-                        </div>
-                        <div class="p-3 rounded-lg bg-white/5 border border-white/10">
-                            <i class="fa-solid fa-id-card text-amber-400 mb-1 text-lg" aria-hidden="true"></i>
-                            <div class="text-xs font-semibold text-white">ID Verified</div>
-                            <div class="text-[11px] text-slate-300">Every signer</div>
-                        </div>
-                    </div>
+                    <ul class="pt-1 flex flex-wrap justify-center lg:justify-start gap-3 text-sm font-semibold text-plum-800">
+                        <li class="flex items-center gap-2 bg-white/80 border border-hair rounded-full px-4 py-2"><i class="fa-solid fa-car-side text-petal-600" aria-hidden="true"></i> I come to you</li>
+                        <li class="flex items-center gap-2 bg-white/80 border border-hair rounded-full px-4 py-2"><i class="fa-solid fa-moon text-petal-600" aria-hidden="true"></i> Evenings &amp; weekends</li>
+                        <li class="flex items-center gap-2 bg-white/80 border border-hair rounded-full px-4 py-2"><i class="fa-solid fa-scale-balanced text-petal-600" aria-hidden="true"></i> $10 per signature</li>
+                        <li class="flex items-center gap-2 bg-white/80 border border-hair rounded-full px-4 py-2"><i class="fa-solid fa-hand-holding-heart text-petal-600" aria-hidden="true"></i> Patient &amp; unhurried</li>
+                    </ul>
 
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                        <a href="#book" class="w-full sm:w-auto text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold px-7 py-3.5 rounded-lg shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2">
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#book" class="w-full sm:w-auto text-center bg-petal-600 hover:bg-petal-700 text-white font-bold px-8 py-4 rounded-full shadow-md hover:shadow-lg transition flex items-center justify-center gap-2">
                             <i class="fa-solid fa-calendar-plus" aria-hidden="true"></i>
-                            Request Appointment
+                            Request a Visit
                         </a>
-                        <a data-tel href="#book" class="w-full sm:w-auto text-center bg-white/10 hover:bg-white/15 text-white font-medium border border-white/20 px-6 py-3.5 rounded-lg transition flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                        <a data-tel href="#book" class="w-full sm:w-auto text-center bg-white hover:bg-petal-50 text-plum-900 font-bold border border-petal-200 px-7 py-4 rounded-full transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone text-petal-600" aria-hidden="true"></i>
                             Call or Text <span data-cfg="phoneDisplay">(000) 000-0000</span>
                         </a>
                     </div>
@@ -165,17 +195,17 @@
 
                 <!-- Quick start card: fills in the full request form below -->
                 <div class="lg:col-span-5">
-                    <div class="bg-white text-slate-900 rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-200">
-                        <div class="border-b border-slate-100 pb-4 mb-6">
-                            <span class="text-xs font-bold uppercase tracking-wider text-amber-700 block mb-1">Quick Start</span>
-                            <h2 class="font-serif text-2xl font-bold text-navy-900">Need a Notary Soon?</h2>
-                            <p class="text-xs text-slate-500 mt-1">Start here. You'll review your details and send them on the next step.</p>
+                    <div class="relative bg-white rounded-[2rem] p-6 sm:p-8 shadow-xl shadow-petal-200/50 border border-hair">
+                        <svg class="absolute -top-7 left-1/2 -translate-x-1/2 w-14 h-14" style="color:#E8A9B0" aria-hidden="true"><use href="#blossom"/></svg>
+                        <div class="text-center pb-5 mb-6 border-b border-hair">
+                            <h2 class="font-serif text-3xl font-bold text-plum-900">Need a notary soon?</h2>
+                            <p class="text-sm text-plum-700 mt-1">Start here. You'll review everything before you send it.</p>
                         </div>
 
                         <form id="hero-quick-form" class="space-y-4" novalidate>
                             <div>
-                                <label for="q-doc" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Document Type</label>
-                                <select id="q-doc" class="w-full border border-slate-400 rounded-lg px-3.5 py-2.5 text-sm text-slate-800 focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                                <label for="q-doc" class="petal-label">What needs notarizing?</label>
+                                <select id="q-doc" class="petal-input">
                                     <option value="Power of Attorney">Power of Attorney</option>
                                     <option value="Healthcare Directive / Living Will">Healthcare Directive / Living Will</option>
                                     <option value="Vehicle Title Transfer">Vehicle Title Transfer</option>
@@ -187,27 +217,27 @@
 
                             <div class="grid grid-cols-2 gap-3">
                                 <div>
-                                    <label for="q-date" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Preferred Date</label>
-                                    <input id="q-date" type="date" class="js-min-today w-full border border-slate-400 rounded-lg px-3 py-2 text-sm text-slate-800 focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                                    <label for="q-date" class="petal-label">Preferred date</label>
+                                    <input id="q-date" type="date" class="js-min-today petal-input">
                                 </div>
                                 <div>
-                                    <label for="q-loc" class="block text-xs font-semibold text-slate-700 uppercase mb-1">City or Zip</label>
-                                    <input id="q-loc" type="text" placeholder="City or zip" class="w-full border border-slate-400 rounded-lg px-3 py-2 text-sm text-slate-800 focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                                    <label for="q-loc" class="petal-label">City or zip</label>
+                                    <input id="q-loc" type="text" class="petal-input">
                                 </div>
                             </div>
 
                             <div class="grid grid-cols-2 gap-3">
                                 <div>
-                                    <label for="q-name" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Your Name</label>
-                                    <input id="q-name" type="text" autocomplete="name" class="w-full border border-slate-400 rounded-lg px-3 py-2 text-sm text-slate-800 focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                                    <label for="q-name" class="petal-label">Your name</label>
+                                    <input id="q-name" type="text" autocomplete="name" class="petal-input">
                                 </div>
                                 <div>
-                                    <label for="q-phone" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Phone</label>
-                                    <input id="q-phone" type="tel" autocomplete="tel" class="w-full border border-slate-400 rounded-lg px-3 py-2 text-sm text-slate-800 focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                                    <label for="q-phone" class="petal-label">Phone</label>
+                                    <input id="q-phone" type="tel" autocomplete="tel" class="petal-input">
                                 </div>
                             </div>
 
-                            <button type="submit" class="w-full bg-navy-900 hover:bg-navy-800 text-amber-400 font-semibold py-3 rounded-lg transition shadow-md flex items-center justify-center gap-2">
+                            <button type="submit" class="w-full bg-petal-600 hover:bg-petal-700 text-white font-bold py-3.5 rounded-full transition shadow-sm flex items-center justify-center gap-2">
                                 <span>Continue</span>
                                 <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
                             </button>
@@ -220,138 +250,63 @@
     </section>
 
     <!-- Trust strip -->
-    <section class="bg-amber-50 border-y border-amber-200/60 py-6">
+    <section class="bg-leaf-50 border-y border-leaf-100 py-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-wrap items-center justify-around gap-6 text-center text-slate-700 text-sm">
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-building-columns text-navy-900 text-lg" aria-hidden="true"></i>
-                    <span class="font-medium">Commissioned by the NC Secretary of State</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-id-card text-navy-900 text-lg" aria-hidden="true"></i>
-                    <span class="font-medium">Photo ID checked for every signer</span>
-                </div>
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-book text-navy-900 text-lg" aria-hidden="true"></i>
-                    <span class="font-medium">Every act recorded in my notary journal</span>
-                </div>
+            <ul class="flex flex-wrap items-center justify-around gap-6 text-center text-plum-800 text-sm font-semibold">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-building-columns text-leaf-700 text-lg" aria-hidden="true"></i> Commissioned by the NC Secretary of State</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-id-card text-leaf-700 text-lg" aria-hidden="true"></i> Photo ID checked for every signer</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-book text-leaf-700 text-lg" aria-hidden="true"></i> Every act recorded in my notary journal</li>
                 <!-- If she buys errors & omissions insurance, add a line here, e.g. "$__ E&O insured". Only list what is true. -->
-            </div>
+            </ul>
         </div>
     </section>
 
     <!-- Services -->
-    <section id="services" class="py-20 bg-white">
+    <section id="services" class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold uppercase tracking-wider text-amber-700 mb-2">Services</h2>
-                <p class="font-serif text-3xl sm:text-4xl font-bold text-navy-900">Who I Help</p>
-                <div class="w-16 h-1 bg-amber-500 mx-auto my-4 rounded-full"></div>
-                <p class="text-slate-600">Most of my appointments are for people who can't easily get to a notary during the workday.</p>
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <p class="font-script text-2xl text-petal-600 mb-1">How I can help</p>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-plum-900">Here for life's important paperwork</h2>
+                <svg class="flourish w-40 h-8 my-4" viewBox="0 0 200 40" aria-hidden="true"><use href="#divider"/></svg>
+                <p class="text-plum-700 text-lg">Most of my visits are with families and folks who can't easily get to a notary during the workday.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 transition duration-200 hover:shadow-md flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center text-xl mb-5 shadow"><i class="fa-solid fa-signature" aria-hidden="true"></i></div>
-                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">General Notarizations</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Personal, business, and out-of-state documents that need a notary's certificate.</p>
-                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Acknowledgments</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Jurats &amp; verifications</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Oaths &amp; affirmations</li>
-                        </ul>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex justify-between items-center text-sm">
-                        <span class="font-semibold text-slate-600">Fee:</span>
-                        <span class="font-bold text-navy-900">$10 per signature</span>
-                    </div>
+                <div class="bg-white border border-hair rounded-3xl p-7 transition hover:shadow-lg hover:shadow-petal-100 flex flex-col">
+                    <div class="w-14 h-14 rounded-full bg-petal-100 text-petal-600 flex items-center justify-center text-xl mb-5"><i class="fa-solid fa-hospital" aria-hidden="true"></i></div>
+                    <h3 class="font-serif text-2xl font-bold text-plum-900 mb-2">Hospitals &amp; care facilities</h3>
+                    <p class="text-plum-700 leading-relaxed">Gentle bedside visits for patients and residents in hospitals, rehab centers, nursing homes, and assisted living.</p>
                 </div>
 
-                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 transition duration-200 hover:shadow-md flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center text-xl mb-5 shadow"><i class="fa-solid fa-hospital" aria-hidden="true"></i></div>
-                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Hospitals &amp; Care Facilities</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Bedside visits for patients and residents, with time to make sure every signer is ready.</p>
-                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Hospitals &amp; rehab centers</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Nursing homes &amp; assisted living</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Homebound clients</li>
-                        </ul>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex justify-between items-center text-sm">
-                        <span class="font-semibold text-slate-600">Travel:</span>
-                        <span class="font-bold text-navy-900">Mileage, agreed in advance</span>
-                    </div>
+                <div class="bg-white border border-hair rounded-3xl p-7 transition hover:shadow-lg hover:shadow-petal-100 flex flex-col">
+                    <div class="w-14 h-14 rounded-full bg-leaf-100 text-leaf-700 flex items-center justify-center text-xl mb-5"><i class="fa-solid fa-house-chimney-window" aria-hidden="true"></i></div>
+                    <h3 class="font-serif text-2xl font-bold text-plum-900 mb-2">At your home</h3>
+                    <p class="text-plum-700 leading-relaxed">If getting out is hard, I'll come to your kitchen table at a time that works for your family.</p>
                 </div>
 
-                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 transition duration-200 hover:shadow-md flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center text-xl mb-5 shadow"><i class="fa-solid fa-file-medical" aria-hidden="true"></i></div>
-                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Powers of Attorney &amp; Healthcare Documents</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Notarizing the documents your attorney or family has already prepared.</p>
-                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Powers of attorney</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Healthcare powers of attorney</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Living wills</li>
-                        </ul>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex justify-between items-center text-sm">
-                        <span class="font-semibold text-slate-600">Fee:</span>
-                        <span class="font-bold text-navy-900">$10 per signature</span>
-                    </div>
+                <div class="bg-white border border-hair rounded-3xl p-7 transition hover:shadow-lg hover:shadow-petal-100 flex flex-col">
+                    <div class="w-14 h-14 rounded-full bg-petal-100 text-petal-600 flex items-center justify-center text-xl mb-5"><i class="fa-solid fa-file-medical" aria-hidden="true"></i></div>
+                    <h3 class="font-serif text-2xl font-bold text-plum-900 mb-2">Powers of attorney &amp; healthcare papers</h3>
+                    <p class="text-plum-700 leading-relaxed">Powers of attorney, healthcare powers of attorney, and living wills your attorney or family has prepared.</p>
                 </div>
 
-                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 transition duration-200 hover:shadow-md flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center text-xl mb-5 shadow"><i class="fa-solid fa-car-side" aria-hidden="true"></i></div>
-                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Vehicle Title Transfers</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Selling a car privately? I'll meet you and the buyer to notarize the title.</p>
-                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Private car sales</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Small dealers</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Evening &amp; weekend meetups</li>
-                        </ul>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex justify-between items-center text-sm">
-                        <span class="font-semibold text-slate-600">Fee:</span>
-                        <span class="font-bold text-navy-900">$10 per signature</span>
-                    </div>
+                <div class="bg-white border border-hair rounded-3xl p-7 transition hover:shadow-lg hover:shadow-petal-100 flex flex-col">
+                    <div class="w-14 h-14 rounded-full bg-leaf-100 text-leaf-700 flex items-center justify-center text-xl mb-5"><i class="fa-solid fa-car-side" aria-hidden="true"></i></div>
+                    <h3 class="font-serif text-2xl font-bold text-plum-900 mb-2">Vehicle titles</h3>
+                    <p class="text-plum-700 leading-relaxed">Selling a car privately? I'll meet you and the buyer to notarize the title.</p>
                 </div>
 
-                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 transition duration-200 hover:shadow-md flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center text-xl mb-5 shadow"><i class="fa-solid fa-file-contract" aria-hidden="true"></i></div>
-                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Affidavits &amp; Everyday Documents</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4">The paperwork life throws at you, handled on your schedule.</p>
-                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Affidavits &amp; sworn statements</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Travel consent for minors</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Letters &amp; forms</li>
-                        </ul>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex justify-between items-center text-sm">
-                        <span class="font-semibold text-slate-600">Fee:</span>
-                        <span class="font-bold text-navy-900">$10 per signature</span>
-                    </div>
+                <div class="bg-white border border-hair rounded-3xl p-7 transition hover:shadow-lg hover:shadow-petal-100 flex flex-col">
+                    <div class="w-14 h-14 rounded-full bg-petal-100 text-petal-600 flex items-center justify-center text-xl mb-5"><i class="fa-solid fa-file-signature" aria-hidden="true"></i></div>
+                    <h3 class="font-serif text-2xl font-bold text-plum-900 mb-2">Everyday documents</h3>
+                    <p class="text-plum-700 leading-relaxed">Affidavits, travel consent forms for minors, letters, and out-of-state paperwork.</p>
                 </div>
 
-                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 transition duration-200 hover:shadow-md flex flex-col justify-between">
-                    <div>
-                        <div class="w-12 h-12 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center text-xl mb-5 shadow"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></div>
-                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Small Businesses</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed mb-4">After-hours visits for paperwork your team needs notarized.</p>
-                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> HR &amp; employment forms</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Vendor &amp; licensing paperwork</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Several signers in one visit</li>
-                        </ul>
-                    </div>
-                    <div class="pt-4 border-t border-slate-200 flex justify-between items-center text-sm">
-                        <span class="font-semibold text-slate-600">Fee:</span>
-                        <span class="font-bold text-navy-900">$10 per signature</span>
-                    </div>
+                <div class="bg-white border border-hair rounded-3xl p-7 transition hover:shadow-lg hover:shadow-petal-100 flex flex-col">
+                    <div class="w-14 h-14 rounded-full bg-leaf-100 text-leaf-700 flex items-center justify-center text-xl mb-5"><i class="fa-solid fa-store" aria-hidden="true"></i></div>
+                    <h3 class="font-serif text-2xl font-bold text-plum-900 mb-2">Small businesses</h3>
+                    <p class="text-plum-700 leading-relaxed">After-hours visits for HR forms and business paperwork, with several signers in one visit.</p>
                 </div>
 
             </div>
@@ -359,106 +314,96 @@
     </section>
 
     <!-- Fees + Calculator -->
-    <section id="fee-schedule" class="py-16 bg-slate-100 border-y border-slate-200">
+    <section id="fee-schedule" class="py-20 bg-leaf-50 border-y border-leaf-100 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-12 gap-8 items-start">
+            <div class="grid lg:grid-cols-12 gap-10 items-start">
 
                 <div class="lg:col-span-6 space-y-6">
                     <div>
-                        <span class="text-xs font-bold uppercase tracking-wider text-amber-700 block mb-1">Simple, Transparent Fees</span>
-                        <h2 class="font-serif text-3xl font-bold text-navy-900">North Carolina Fee Schedule</h2>
-                        <div class="w-12 h-1 bg-amber-500 my-3 rounded-full"></div>
+                        <p class="font-script text-2xl text-petal-600 mb-1">No surprises</p>
+                        <h2 class="font-serif text-4xl font-bold text-plum-900">Simple, fair fees</h2>
                     </div>
 
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        North Carolina law (<strong>N.C. Gen. Stat. &sect; 10B-31</strong>) sets the most a notary may charge. I never charge more, and you'll approve the total, including any mileage, in writing before I travel.
+                    <p class="text-plum-700 text-lg leading-relaxed">
+                        North Carolina law sets the most a notary may charge (N.C. Gen. Stat. &sect; 10B-31). I never charge more, and you'll approve your total, including any mileage, in writing before I head your way.
                     </p>
 
-                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
-                        <table class="w-full text-left text-xs sm:text-sm">
-                            <thead class="bg-navy-900 text-white font-semibold uppercase text-[11px] tracking-wider">
+                    <div class="bg-white rounded-3xl border border-hair overflow-hidden">
+                        <table class="w-full text-left">
+                            <caption class="sr-only">Notary fees</caption>
+                            <tbody class="divide-y divide-hair text-plum-800">
                                 <tr>
-                                    <th scope="col" class="py-3 px-4">Notarial Act</th>
-                                    <th scope="col" class="py-3 px-4 text-right">Fee</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-slate-100 font-medium text-slate-700">
-                                <tr>
-                                    <td class="py-3 px-4">Acknowledgment (per principal signature)</td>
-                                    <td class="py-3 px-4 text-right font-bold text-navy-900">$10.00</td>
+                                    <th scope="row" class="py-4 px-5 font-semibold">Acknowledgment <span class="block text-sm font-normal text-plum-600">per signature</span></th>
+                                    <td class="py-4 px-5 text-right font-serif text-2xl font-bold text-petal-700">$10</td>
                                 </tr>
                                 <tr>
-                                    <td class="py-3 px-4">Jurat, verification or proof (per principal signature)</td>
-                                    <td class="py-3 px-4 text-right font-bold text-navy-900">$10.00</td>
+                                    <th scope="row" class="py-4 px-5 font-semibold">Jurat, verification or proof <span class="block text-sm font-normal text-plum-600">per signature</span></th>
+                                    <td class="py-4 px-5 text-right font-serif text-2xl font-bold text-petal-700">$10</td>
                                 </tr>
                                 <tr>
-                                    <td class="py-3 px-4">Oath or affirmation without a signature (per person)</td>
-                                    <td class="py-3 px-4 text-right font-bold text-navy-900">$10.00</td>
+                                    <th scope="row" class="py-4 px-5 font-semibold">Oath or affirmation <span class="block text-sm font-normal text-plum-600">without a signature, per person</span></th>
+                                    <td class="py-4 px-5 text-right font-serif text-2xl font-bold text-petal-700">$10</td>
                                 </tr>
-                                <tr class="bg-slate-50">
-                                    <td class="py-3 px-4 text-slate-600 font-normal">Travel: actual mileage at the federal business rate, only if agreed in writing before I travel</td>
-                                    <td class="py-3 px-4 text-right font-bold text-slate-700 whitespace-nowrap"><span data-cfg="mileageRateDisplay">72.5&cent;</span> / mile</td>
+                                <tr class="bg-petal-50">
+                                    <th scope="row" class="py-4 px-5 font-semibold">Travel <span class="block text-sm font-normal text-plum-600">actual mileage at the federal business rate, only if you agree in writing before I travel</span></th>
+                                    <td class="py-4 px-5 text-right font-bold text-plum-800 whitespace-nowrap"><span data-cfg="mileageRateDisplay">72.5&cent;</span>/mile</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
-                    <div class="bg-amber-50 border border-amber-300/70 rounded-lg p-4 text-sm text-amber-950 space-y-1">
-                        <div class="font-bold flex items-center gap-1.5">
-                            <i class="fa-solid fa-circle-info text-amber-700" aria-hidden="true"></i>
-                            Notice
-                        </div>
-                        <p class="leading-normal">
-                            I am not an attorney licensed to practice law in North Carolina, and I may not give legal advice or accept fees for legal advice. I can't help you choose, prepare, or explain a document. Please consult a licensed attorney for that.
-                        </p>
+                    <div class="bg-white/70 border border-petal-200 rounded-2xl p-5 text-plum-800">
+                        <p class="font-bold flex items-center gap-2 mb-1"><i class="fa-solid fa-circle-info text-petal-600" aria-hidden="true"></i> A friendly note</p>
+                        <p class="text-sm leading-relaxed">I am not an attorney licensed to practice law in North Carolina, and I may not give legal advice or accept fees for legal advice. I can't help you choose, prepare, or explain a document, so please check with an attorney for that.</p>
                     </div>
                 </div>
 
-                <div id="calculator" class="lg:col-span-6 bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-slate-200 scroll-mt-24">
-                    <div class="flex items-center gap-3 border-b border-slate-100 pb-4 mb-6">
-                        <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-700 flex items-center justify-center text-lg">
+                <div id="calculator" class="lg:col-span-6 relative bg-white rounded-[2rem] p-6 sm:p-8 shadow-xl shadow-leaf-100 border border-hair scroll-mt-24">
+                    <svg class="absolute -top-6 -right-4 w-28 opacity-90 pointer-events-none" viewBox="0 0 240 140" style="transform: scaleX(-1)" aria-hidden="true"><use href="#sprig"/></svg>
+                    <div class="flex items-center gap-3 pb-5 mb-6 border-b border-hair">
+                        <div class="w-12 h-12 rounded-full bg-petal-100 text-petal-600 flex items-center justify-center text-lg">
                             <i class="fa-solid fa-calculator" aria-hidden="true"></i>
                         </div>
                         <div>
-                            <h3 class="font-serif text-xl font-bold text-navy-900">Fee Estimator</h3>
-                            <p class="text-xs text-slate-500">A quick estimate. I'll confirm your exact total before the visit.</p>
+                            <h3 class="font-serif text-2xl font-bold text-plum-900">Fee estimator</h3>
+                            <p class="text-sm text-plum-700">A quick estimate. I'll confirm your exact total before the visit.</p>
                         </div>
                     </div>
 
                     <div class="space-y-4">
                         <div class="grid grid-cols-2 gap-4">
                             <div>
-                                <label for="calc-signatures" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Notarized Signatures</label>
-                                <input type="number" id="calc-signatures" value="1" min="1" max="50" inputmode="numeric" class="w-full border border-slate-400 rounded-lg px-3.5 py-2.5 text-sm text-slate-800 focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                                <label for="calc-signatures" class="petal-label">Notarized signatures</label>
+                                <input type="number" id="calc-signatures" value="1" min="1" max="50" inputmode="numeric" class="petal-input">
                             </div>
                             <div>
-                                <label for="calc-miles" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Travel Miles</label>
-                                <input type="number" id="calc-miles" value="0" min="0" max="300" inputmode="decimal" class="w-full border border-slate-400 rounded-lg px-3.5 py-2.5 text-sm text-slate-800 focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                                <label for="calc-miles" class="petal-label">Travel miles</label>
+                                <input type="number" id="calc-miles" value="0" min="0" max="300" inputmode="decimal" class="petal-input disabled:bg-cream disabled:text-plum-600">
                             </div>
                         </div>
 
                         <label class="inline-flex items-center gap-2 cursor-pointer pt-1">
-                            <input type="checkbox" id="calc-travel-toggle" checked class="rounded text-navy-900 focus:ring-navy-800 h-4 w-4">
-                            <span class="text-sm font-medium text-slate-700">I need you to travel to me</span>
+                            <input type="checkbox" id="calc-travel-toggle" checked class="rounded h-5 w-5 accent-[#9E4F5C]">
+                            <span class="font-semibold text-plum-800">I'd like you to come to me</span>
                         </label>
 
-                        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2 text-sm" aria-live="polite">
-                            <div class="flex justify-between text-slate-600">
-                                <span>Notary fees:</span>
-                                <span id="out-act-fee" class="font-semibold text-slate-800">$10.00</span>
+                        <div class="bg-petal-50 border border-petal-100 rounded-2xl p-5 space-y-2" aria-live="polite">
+                            <div class="flex justify-between text-plum-700">
+                                <span>Notary fees</span>
+                                <span id="out-act-fee" class="font-bold text-plum-900">$10.00</span>
                             </div>
-                            <div class="flex justify-between text-slate-600">
-                                <span>Estimated mileage:</span>
-                                <span id="out-travel-fee" class="font-semibold text-slate-800">$0.00</span>
+                            <div class="flex justify-between text-plum-700">
+                                <span>Estimated mileage</span>
+                                <span id="out-travel-fee" class="font-bold text-plum-900">$0.00</span>
                             </div>
-                            <div class="border-t border-slate-200 pt-2 flex justify-between items-center">
-                                <span class="font-bold text-navy-900">Estimated total:</span>
-                                <span id="out-total-fee" class="font-serif text-2xl font-bold text-amber-700">$10.00</span>
+                            <div class="border-t border-petal-200 pt-3 flex justify-between items-center">
+                                <span class="font-bold text-plum-900">Estimated total</span>
+                                <span id="out-total-fee" class="font-serif text-3xl font-bold text-petal-700">$10.00</span>
                             </div>
                         </div>
 
-                        <button type="button" id="use-estimate-btn" class="w-full text-center bg-navy-900 hover:bg-navy-800 text-amber-400 font-semibold py-3 rounded-lg shadow transition block">
-                            Use This Estimate &amp; Request a Visit
+                        <button type="button" id="use-estimate-btn" class="w-full text-center bg-petal-600 hover:bg-petal-700 text-white font-bold py-3.5 rounded-full shadow-sm transition">
+                            Use this estimate &amp; request a visit
                         </button>
                     </div>
                 </div>
@@ -468,54 +413,69 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" class="py-20 relative overflow-hidden scroll-mt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
 
-                <div class="lg:col-span-5 relative">
-                    <div class="bg-navy-900 text-white rounded-2xl p-8 shadow-xl relative z-10 space-y-6">
-                        <div class="inline-block p-3 rounded-xl bg-amber-500 text-navy-950 font-bold text-xl">
-                            <i class="fa-solid fa-stamp" aria-hidden="true"></i>
-                        </div>
-                        <h3 class="font-serif text-2xl font-bold"><span data-cfg="ownerName">[Your Name]</span>, Notary Public</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            Serving families, care facilities, and small businesses across <span data-cfg="serviceArea">[your service area]</span>.
-                        </p>
-                        <div class="space-y-3 pt-2 text-sm">
-                            <div class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-400 text-base" aria-hidden="true"></i><span>Commissioned in <span data-cfg="commissionCounty">[County]</span> County, NC</span></div>
-                            <div class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-400 text-base" aria-hidden="true"></i><span><span data-cfg="hoursWeekday">Weekday evenings</span></span></div>
-                            <div class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-400 text-base" aria-hidden="true"></i><span><span data-cfg="hoursWeekend">Weekends by appointment</span></span></div>
+                <div class="lg:col-span-5 flex justify-center">
+                    <!-- Portrait in a floral wreath (photo is embedded in this file) -->
+                    <div class="relative w-72 h-72 sm:w-80 sm:h-80">
+                        <svg class="absolute inset-0 w-full h-full" viewBox="0 0 200 200" aria-hidden="true">
+                            <circle cx="100" cy="100" r="86" fill="none" stroke="#A9BFA5" stroke-width="1.5"/>
+                            <g fill="#A9BFA5">
+                                <ellipse cx="100" cy="12" rx="5" ry="12" transform="rotate(10 100 100)"/>
+                                <ellipse cx="100" cy="12" rx="5" ry="12" transform="rotate(40 100 100)"/>
+                                <ellipse cx="100" cy="12" rx="5" ry="12" transform="rotate(100 100 100)"/>
+                                <ellipse cx="100" cy="12" rx="5" ry="12" transform="rotate(130 100 100)"/>
+                                <ellipse cx="100" cy="12" rx="5" ry="12" transform="rotate(190 100 100)"/>
+                                <ellipse cx="100" cy="12" rx="5" ry="12" transform="rotate(220 100 100)"/>
+                                <ellipse cx="100" cy="12" rx="5" ry="12" transform="rotate(280 100 100)"/>
+                                <ellipse cx="100" cy="12" rx="5" ry="12" transform="rotate(310 100 100)"/>
+                            </g>
+                            <g fill="#BCCDB8">
+                                <ellipse cx="100" cy="14" rx="4.5" ry="10" transform="rotate(25 100 100)"/>
+                                <ellipse cx="100" cy="14" rx="4.5" ry="10" transform="rotate(115 100 100)"/>
+                                <ellipse cx="100" cy="14" rx="4.5" ry="10" transform="rotate(205 100 100)"/>
+                                <ellipse cx="100" cy="14" rx="4.5" ry="10" transform="rotate(295 100 100)"/>
+                            </g>
+                            <use href="#blossom" x="86" y="0" width="28" height="28" style="color:#E8A9B0"/>
+                            <use href="#blossom" x="172" y="86" width="24" height="24" style="color:#F1CFCB"/>
+                            <use href="#blossom" x="86" y="174" width="26" height="26" style="color:#E8A9B0"/>
+                            <use href="#blossom" x="4" y="86" width="24" height="24" style="color:#F1CFCB"/>
+                        </svg>
+                        <div class="absolute inset-[16%] rounded-full overflow-hidden bg-petal-100 border-4 border-white shadow-lg flex items-center justify-center">
+                            <img id="owner-photo" alt="Photo of M. Rebecca Rivera" class="w-full h-full object-cover" src="data:image/jpeg;base64,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">
+                            <span id="owner-initials" class="hidden font-serif text-6xl font-bold text-petal-600" aria-hidden="true">MR</span>
                         </div>
                     </div>
-                    <div class="absolute -bottom-4 -right-4 w-full h-full bg-amber-400/20 rounded-2xl"></div>
                 </div>
 
-                <div class="lg:col-span-7 space-y-6">
-                    <span class="text-xs font-bold uppercase tracking-wider text-amber-700 block">About</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900">Careful, Patient, and On Time</h2>
-                    <div class="w-16 h-1 bg-amber-500 rounded-full"></div>
+                <div class="lg:col-span-7 space-y-5">
+                    <p class="font-script text-3xl text-petal-600">Nice to meet you</p>
+                    <h2 class="font-serif text-4xl sm:text-5xl font-bold text-plum-900">I'm <span data-cfg="ownerName">M. Rebecca Rivera</span></h2>
+                    <svg class="w-40 h-8" viewBox="0 0 200 40" aria-hidden="true"><use href="#divider"/></svg>
 
-                    <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
-                        A notarization protects you against fraud and forgery. That's why I check every signer's identification, make sure they're signing willingly, and record each notarization in my journal.
+                    <p class="text-plum-700 text-lg leading-relaxed">
+                        I know paperwork often shows up at stressful times: a loved one in the hospital, a move, a car sale, a family decision. My goal is to make the notary part easy. I'll come to you, take my time, and treat your family with kindness and respect.
                     </p>
-                    <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
-                        Whether it's paperwork at a kitchen table or an urgent healthcare document at a hospital bedside, I take the time to get it right and treat every family with respect.
+                    <p class="text-plum-700 text-lg leading-relaxed">
+                        I serve <span data-cfg="serviceArea">your area</span> on <span data-cfg="hoursWeekday">weekday evenings</span>, plus <span data-cfg="hoursWeekend">weekends by appointment</span>.
                     </p>
 
                     <div class="grid sm:grid-cols-2 gap-4 pt-2">
-                        <div class="border border-slate-200 rounded-lg p-4 bg-slate-50">
-                            <div class="font-bold text-navy-900 text-sm mb-1 flex items-center gap-2"><i class="fa-solid fa-id-card text-amber-700" aria-hidden="true"></i> Careful ID Checks</div>
-                            <p class="text-sm text-slate-600">A current government-issued photo ID for every signer, such as a driver's license, passport, or military ID.</p>
+                        <div class="bg-white border border-hair rounded-2xl p-5">
+                            <p class="font-bold text-plum-900 mb-1 flex items-center gap-2"><i class="fa-solid fa-id-card text-petal-600" aria-hidden="true"></i> Careful ID checks</p>
+                            <p class="text-sm text-plum-700">A current photo ID for every signer, like a driver's license, passport, or military ID.</p>
                         </div>
-                        <div class="border border-slate-200 rounded-lg p-4 bg-slate-50">
-                            <div class="font-bold text-navy-900 text-sm mb-1 flex items-center gap-2"><i class="fa-solid fa-book" aria-hidden="true"></i> Notary Journal</div>
-                            <p class="text-sm text-slate-600">Every notarization is recorded, for your protection and mine.</p>
+                        <div class="bg-white border border-hair rounded-2xl p-5">
+                            <p class="font-bold text-plum-900 mb-1 flex items-center gap-2"><i class="fa-solid fa-book text-leaf-700" aria-hidden="true"></i> Notary journal</p>
+                            <p class="text-sm text-plum-700">Every notarization is recorded, for your protection and mine.</p>
                         </div>
                     </div>
 
-                    <div class="pt-4 flex flex-wrap gap-4 items-center">
-                        <a href="#book" class="bg-navy-900 hover:bg-navy-800 text-amber-400 font-semibold px-6 py-3 rounded-lg shadow transition text-sm">Request Appointment</a>
-                        <a data-tel href="#book" class="text-navy-900 font-semibold text-sm hover:underline flex items-center gap-2"><i class="fa-solid fa-phone" aria-hidden="true"></i> Call or Text</a>
+                    <div class="pt-3 flex flex-wrap gap-4 items-center">
+                        <a href="#book" class="bg-petal-600 hover:bg-petal-700 text-white font-bold px-7 py-3.5 rounded-full shadow-sm transition">Request a Visit</a>
+                        <a data-tel href="#book" class="text-petal-700 font-bold hover:underline flex items-center gap-2"><i class="fa-solid fa-phone" aria-hidden="true"></i> Call or text me</a>
                     </div>
                 </div>
 
@@ -524,72 +484,73 @@
     </section>
 
     <!-- How it works -->
-    <section id="how-it-works" class="py-20 bg-slate-50 border-t border-slate-200">
+    <section id="how-it-works" class="py-20 bg-petal-50 border-y border-petal-100 scroll-mt-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold uppercase tracking-wider text-amber-700 mb-2">How It Works</h2>
-                <p class="font-serif text-3xl sm:text-4xl font-bold text-navy-900">Four Simple Steps</p>
-                <div class="w-16 h-1 bg-amber-500 mx-auto my-4 rounded-full"></div>
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <p class="font-script text-2xl text-petal-600 mb-1">Easy as can be</p>
+                <h2 class="font-serif text-4xl sm:text-5xl font-bold text-plum-900">How it works</h2>
+                <svg class="flourish w-40 h-8 mt-4" viewBox="0 0 200 40" aria-hidden="true"><use href="#divider"/></svg>
             </div>
 
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="bg-white rounded-xl p-6 border border-slate-200 text-center shadow-sm">
-                    <div class="w-12 h-12 rounded-full bg-navy-900 text-amber-400 font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow">1</div>
-                    <h3 class="font-serif font-bold text-lg text-navy-900 mb-2">Request</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">Send the form below, or call or text. Tell me the document, number of signers, and where you'll be.</p>
-                </div>
-                <div class="bg-white rounded-xl p-6 border border-slate-200 text-center shadow-sm">
-                    <div class="w-12 h-12 rounded-full bg-navy-900 text-amber-400 font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow">2</div>
-                    <h3 class="font-serif font-bold text-lg text-navy-900 mb-2">Confirm</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">I'll reach out to confirm a time and send your total, including mileage, in writing.</p>
-                </div>
-                <div class="bg-white rounded-xl p-6 border border-slate-200 text-center shadow-sm">
-                    <div class="w-12 h-12 rounded-full bg-navy-900 text-amber-400 font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow">3</div>
-                    <h3 class="font-serif font-bold text-lg text-navy-900 mb-2">Prepare</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">Have your unsigned document, every signer, and a current photo ID for each signer ready.</p>
-                </div>
-                <div class="bg-white rounded-xl p-6 border border-slate-200 text-center shadow-sm">
-                    <div class="w-12 h-12 rounded-full bg-navy-900 text-amber-400 font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow">4</div>
-                    <h3 class="font-serif font-bold text-lg text-navy-900 mb-2">Sign &amp; Seal</h3>
-                    <p class="text-sm text-slate-600 leading-relaxed">You sign in front of me, and I complete the notarial certificate, apply my seal, and record it in my journal.</p>
-                </div>
-            </div>
+            <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <li class="bg-white rounded-3xl p-7 border border-hair text-center">
+                    <div class="w-14 h-14 rounded-full bg-petal-600 text-white font-serif font-bold text-2xl flex items-center justify-center mx-auto mb-4">1</div>
+                    <h3 class="font-serif font-bold text-2xl text-plum-900 mb-2">Reach out</h3>
+                    <p class="text-plum-700">Send the form below, or call or text. Tell me the document, how many people are signing, and where you'll be.</p>
+                </li>
+                <li class="bg-white rounded-3xl p-7 border border-hair text-center">
+                    <div class="w-14 h-14 rounded-full bg-leaf-700 text-white font-serif font-bold text-2xl flex items-center justify-center mx-auto mb-4">2</div>
+                    <h3 class="font-serif font-bold text-2xl text-plum-900 mb-2">We confirm</h3>
+                    <p class="text-plum-700">I'll get back to you to set a time and send your total, including mileage, in writing.</p>
+                </li>
+                <li class="bg-white rounded-3xl p-7 border border-hair text-center">
+                    <div class="w-14 h-14 rounded-full bg-petal-600 text-white font-serif font-bold text-2xl flex items-center justify-center mx-auto mb-4">3</div>
+                    <h3 class="font-serif font-bold text-2xl text-plum-900 mb-2">Get ready</h3>
+                    <p class="text-plum-700">Have your unsigned document, every signer, and a current photo ID for each person.</p>
+                </li>
+                <li class="bg-white rounded-3xl p-7 border border-hair text-center">
+                    <div class="w-14 h-14 rounded-full bg-leaf-700 text-white font-serif font-bold text-2xl flex items-center justify-center mx-auto mb-4">4</div>
+                    <h3 class="font-serif font-bold text-2xl text-plum-900 mb-2">Sign &amp; done</h3>
+                    <p class="text-plum-700">You sign in front of me, and I complete the certificate, apply my seal, and record it in my journal.</p>
+                </li>
+            </ol>
         </div>
     </section>
 
     <!-- Booking form -->
-    <section id="book" class="py-20 bg-white scroll-mt-20">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-slate-50 rounded-2xl p-6 sm:p-10 border border-slate-200 shadow-xl">
+    <section id="book" class="py-20 relative overflow-hidden scroll-mt-20">
+        <svg class="absolute top-10 -right-10 w-56 opacity-40 lg:opacity-70 pointer-events-none" viewBox="0 0 240 140" style="transform: scaleX(-1)" aria-hidden="true"><use href="#sprig"/></svg>
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white rounded-[2rem] p-6 sm:p-10 border border-hair shadow-xl shadow-petal-100">
 
                 <div class="text-center mb-8">
-                    <span class="text-xs font-bold uppercase tracking-wider text-amber-700 block mb-1">Request an Appointment</span>
-                    <h2 class="font-serif text-3xl font-bold text-navy-900">Tell Me What You Need</h2>
-                    <p class="text-sm text-slate-600 mt-2">I'll reply to confirm your time and total. For same-day help, calling or texting <a data-tel href="#book" class="font-semibold text-navy-900 underline"><span data-cfg="phoneDisplay">(000) 000-0000</span></a> is fastest.</p>
+                    <p class="font-script text-3xl text-petal-600">Let's find a time</p>
+                    <h2 class="font-serif text-4xl font-bold text-plum-900">Request a visit</h2>
+                    <p class="text-plum-700 mt-3">I'll reply to confirm your time and total. Need help today? Calling or texting <a data-tel href="#book" class="font-bold text-petal-700 underline"><span data-cfg="phoneDisplay">(000) 000-0000</span></a> is fastest.</p>
                 </div>
 
-                <div id="booking-success" class="hidden mb-6 p-4 bg-emerald-50 border border-emerald-300 rounded-lg text-emerald-900 text-sm" role="status" tabindex="-1">
-                    <div class="flex items-start gap-2">
-                        <i class="fa-solid fa-circle-check text-emerald-700 text-lg mt-0.5" aria-hidden="true"></i>
+                <div id="booking-success" class="hidden mb-6 p-5 bg-leaf-50 border border-leaf-300 rounded-2xl text-plum-900" role="status" tabindex="-1">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-leaf-700 text-xl mt-0.5" aria-hidden="true"></i>
                         <div>
-                            <strong>Thank you, your request was sent.</strong>
+                            <strong>Thank you, your request was sent!</strong>
                             <span id="booking-success-id"></span>
-                            This is a request, not a confirmed appointment yet. I'll contact you to confirm the time and total.
+                            This is a request, not a confirmed appointment yet. I'll be in touch soon to confirm the time and total.
                         </div>
                     </div>
                 </div>
 
-                <div id="booking-error" class="hidden mb-6 p-4 bg-red-50 border border-red-300 rounded-lg text-red-900 text-sm" role="alert" tabindex="-1">
-                    <div class="flex items-start gap-2">
-                        <i class="fa-solid fa-triangle-exclamation text-red-700 text-lg mt-0.5" aria-hidden="true"></i>
+                <div id="booking-error" class="hidden mb-6 p-5 bg-red-50 border border-red-300 rounded-2xl text-red-900" role="alert" tabindex="-1">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-triangle-exclamation text-red-700 text-xl mt-0.5" aria-hidden="true"></i>
                         <div>
                             <strong>Sorry, your request didn't go through.</strong>
-                            Please call or text <a data-tel href="#book" class="font-semibold underline"><span data-cfg="phoneDisplay">(000) 000-0000</span></a> and I'll get you scheduled.
+                            Please call or text <a data-tel href="#book" class="font-bold underline"><span data-cfg="phoneDisplay">(000) 000-0000</span></a> and I'll get you scheduled.
                         </div>
                     </div>
                 </div>
 
-                <form id="booking-form" class="space-y-6">
+                <form id="booking-form" class="space-y-5">
                     <!-- Spam trap: hidden from people, bots fill it in -->
                     <div class="hidden" aria-hidden="true">
                         <label for="f-website">Leave this empty</label>
@@ -598,25 +559,25 @@
                     <input type="hidden" id="f-estimate" name="estimate" value="">
                     <input type="hidden" id="f-source" name="source" value="Website form">
 
-                    <div class="grid md:grid-cols-2 gap-6">
+                    <div class="grid md:grid-cols-2 gap-5">
                         <div>
-                            <label for="f-name" class="block text-xs font-bold text-slate-700 uppercase mb-2">Full Name *</label>
-                            <input id="f-name" name="name" type="text" required autocomplete="name" class="w-full border border-slate-400 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                            <label for="f-name" class="petal-label">Your name *</label>
+                            <input id="f-name" name="name" type="text" required autocomplete="name" class="petal-input">
                         </div>
                         <div>
-                            <label for="f-phone" class="block text-xs font-bold text-slate-700 uppercase mb-2">Phone Number *</label>
-                            <input id="f-phone" name="phone" type="tel" required autocomplete="tel" class="w-full border border-slate-400 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                            <label for="f-phone" class="petal-label">Phone number *</label>
+                            <input id="f-phone" name="phone" type="tel" required autocomplete="tel" class="petal-input">
                         </div>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-6">
+                    <div class="grid md:grid-cols-2 gap-5">
                         <div>
-                            <label for="f-email" class="block text-xs font-bold text-slate-700 uppercase mb-2">Email <span class="font-normal normal-case text-slate-500">(optional, for a copy of your request)</span></label>
-                            <input id="f-email" name="email" type="email" autocomplete="email" class="w-full border border-slate-400 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                            <label for="f-email" class="petal-label">Email <span class="font-normal text-plum-600">(optional, for a copy)</span></label>
+                            <input id="f-email" name="email" type="email" autocomplete="email" class="petal-input">
                         </div>
                         <div>
-                            <label for="f-doc" class="block text-xs font-bold text-slate-700 uppercase mb-2">Document Type *</label>
-                            <select id="f-doc" name="documentType" required class="w-full border border-slate-400 rounded-lg px-4 py-3 text-sm bg-white focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                            <label for="f-doc" class="petal-label">What needs notarizing? *</label>
+                            <select id="f-doc" name="documentType" required class="petal-input">
                                 <option value="">Select one</option>
                                 <option value="Power of Attorney">Power of Attorney</option>
                                 <option value="Healthcare Directive / Living Will">Healthcare Directive / Living Will</option>
@@ -629,18 +590,18 @@
                         </div>
                     </div>
 
-                    <div class="grid md:grid-cols-3 gap-6">
+                    <div class="grid md:grid-cols-3 gap-5">
                         <div>
-                            <label for="f-signers" class="block text-xs font-bold text-slate-700 uppercase mb-2">Number of Signers *</label>
-                            <input id="f-signers" name="signers" type="number" min="1" max="50" value="1" required inputmode="numeric" class="w-full border border-slate-400 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                            <label for="f-signers" class="petal-label">How many signers? *</label>
+                            <input id="f-signers" name="signers" type="number" min="1" max="50" value="1" required inputmode="numeric" class="petal-input">
                         </div>
                         <div>
-                            <label for="f-date" class="block text-xs font-bold text-slate-700 uppercase mb-2">Preferred Date *</label>
-                            <input id="f-date" name="preferredDate" type="date" required class="js-min-today w-full border border-slate-400 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                            <label for="f-date" class="petal-label">Preferred date *</label>
+                            <input id="f-date" name="preferredDate" type="date" required class="js-min-today petal-input">
                         </div>
                         <div>
-                            <label for="f-time" class="block text-xs font-bold text-slate-700 uppercase mb-2">Preferred Time *</label>
-                            <select id="f-time" name="preferredTime" required class="w-full border border-slate-400 rounded-lg px-4 py-3 text-sm bg-white focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                            <label for="f-time" class="petal-label">Preferred time *</label>
+                            <select id="f-time" name="preferredTime" required class="petal-input">
                                 <option value="">Select one</option>
                                 <option value="Weekday evening">Weekday evening</option>
                                 <option value="Saturday">Saturday</option>
@@ -651,24 +612,24 @@
                     </div>
 
                     <div>
-                        <label for="f-location" class="block text-xs font-bold text-slate-700 uppercase mb-2">Where Should I Meet You? *</label>
-                        <input id="f-location" name="location" type="text" required placeholder="Address, or hospital/facility name and city" class="w-full border border-slate-400 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                        <label for="f-location" class="petal-label">Where should I meet you? *</label>
+                        <input id="f-location" name="location" type="text" required placeholder="Address, or hospital/facility name and city" class="petal-input">
                     </div>
 
                     <div>
-                        <label for="f-notes" class="block text-xs font-bold text-slate-700 uppercase mb-2">Anything Else I Should Know?</label>
-                        <textarea id="f-notes" name="notes" rows="3" placeholder="Room number, parking, number of documents, accessibility needs..." class="w-full border border-slate-400 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-navy-800 focus:outline-none"></textarea>
+                        <label for="f-notes" class="petal-label">Anything else I should know?</label>
+                        <textarea id="f-notes" name="notes" rows="3" placeholder="Room number, parking, number of documents, accessibility needs..." class="petal-input"></textarea>
                     </div>
 
-                    <p id="estimate-note" class="hidden text-sm text-slate-700 bg-white border border-slate-200 rounded-lg px-4 py-3"></p>
+                    <p id="estimate-note" class="hidden text-plum-800 bg-petal-50 border border-petal-100 rounded-2xl px-4 py-3"></p>
 
-                    <button type="submit" id="booking-submit" class="w-full bg-navy-900 hover:bg-navy-800 disabled:opacity-60 disabled:cursor-wait text-amber-400 font-bold py-4 rounded-lg shadow-lg hover:shadow-xl transition text-center flex items-center justify-center gap-2">
+                    <button type="submit" id="booking-submit" class="w-full bg-petal-600 hover:bg-petal-700 disabled:opacity-60 disabled:cursor-wait text-white font-bold text-lg py-4 rounded-full shadow-md hover:shadow-lg transition flex items-center justify-center gap-2">
                         <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
                         <span id="booking-submit-label">Send Request</span>
                     </button>
 
-                    <p class="text-xs text-slate-500 text-center">
-                        <i class="fa-solid fa-user-shield mr-1" aria-hidden="true"></i> Your information is only used to schedule your appointment.
+                    <p class="text-sm text-plum-600 text-center">
+                        <i class="fa-solid fa-lock mr-1" aria-hidden="true"></i> Your information is only used to schedule your visit.
                     </p>
                 </form>
 
@@ -677,46 +638,44 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-navy-950 text-slate-300 py-12 border-t border-slate-800">
+    <footer class="bg-plum-900 text-petal-100 pt-14 pb-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <svg class="flourish w-48 h-10 mb-10 opacity-90" viewBox="0 0 200 40" aria-hidden="true"><use href="#divider"/></svg>
+            <div class="grid md:grid-cols-4 gap-8 mb-10">
                 <div class="space-y-3">
-                    <div class="flex items-center gap-2">
-                        <div class="w-8 h-8 rounded bg-amber-500 text-navy-950 flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-stamp" aria-hidden="true"></i></div>
-                        <span class="font-serif text-lg font-bold text-white" data-cfg="ownerName">[Your Name]</span>
-                    </div>
-                    <p class="text-sm leading-relaxed">Mobile notary public serving <span data-cfg="serviceArea">[your service area]</span>, evenings and weekends.</p>
+                    <p class="font-serif text-2xl font-bold text-white"><span data-cfg="ownerName">M. Rebecca Rivera</span></p>
+                    <p class="text-sm leading-relaxed">Notary Services serving <span data-cfg="serviceArea">your area</span>, evenings and weekends. Thank you for supporting a local small business.</p>
                 </div>
 
                 <div>
-                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Navigation</h4>
+                    <h4 class="text-sm font-bold text-white mb-3">Explore</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#services" class="hover:text-amber-400 transition">Services</a></li>
-                        <li><a href="#fee-schedule" class="hover:text-amber-400 transition">Fees</a></li>
-                        <li><a href="#calculator" class="hover:text-amber-400 transition">Fee Estimator</a></li>
-                        <li><a href="#about" class="hover:text-amber-400 transition">About</a></li>
-                        <li><a href="#book" class="hover:text-amber-400 transition">Request Appointment</a></li>
+                        <li><a href="#services" class="hover:text-white transition">How I help</a></li>
+                        <li><a href="#fee-schedule" class="hover:text-white transition">Fees</a></li>
+                        <li><a href="#calculator" class="hover:text-white transition">Fee estimator</a></li>
+                        <li><a href="#about" class="hover:text-white transition">About me</a></li>
+                        <li><a href="#book" class="hover:text-white transition">Request a visit</a></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Contact</h4>
+                    <h4 class="text-sm font-bold text-white mb-3">Say hello</h4>
                     <ul class="space-y-2 text-sm">
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-amber-400" aria-hidden="true"></i><a data-tel href="#book" class="hover:text-white transition"><span data-cfg="phoneDisplay">(000) 000-0000</span></a></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-amber-400" aria-hidden="true"></i><a data-mailto href="#book" class="hover:text-white transition break-all"><span data-cfg="email">you@example.com</span></a></li>
-                        <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-amber-400" aria-hidden="true"></i><span data-cfg="serviceArea">[your service area]</span></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-petal-400" aria-hidden="true"></i><a data-tel href="#book" class="hover:text-white transition"><span data-cfg="phoneDisplay">(000) 000-0000</span></a></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-petal-400" aria-hidden="true"></i><a data-mailto href="#book" class="hover:text-white transition break-all"><span data-cfg="email">you@example.com</span></a></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-petal-400" aria-hidden="true"></i><span data-cfg="serviceArea">your area</span></li>
                     </ul>
                 </div>
 
                 <div>
-                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-3">State Notice</h4>
-                    <p class="text-xs leading-relaxed font-semibold text-slate-200">I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN NORTH CAROLINA, AND I MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.</p>
+                    <h4 class="text-sm font-bold text-white mb-3">State notice</h4>
+                    <p class="text-xs leading-relaxed font-bold text-white">I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN NORTH CAROLINA, AND I MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.</p>
                     <p class="text-xs leading-relaxed mt-2">Commissioned in <span data-cfg="commissionCounty">[County]</span> County, NC. Commission expires <span data-cfg="commissionExpires">[date]</span>.</p>
                 </div>
             </div>
 
-            <div class="border-t border-slate-800 pt-6 text-center text-xs text-slate-400">
-                <p>&copy; <span id="year"></span> <span data-cfg="ownerName">[Your Name]</span>, Notary Public. All rights reserved.</p>
+            <div class="border-t border-plum-700 pt-6 text-center text-xs text-petal-200">
+                <p>&copy; <span id="year"></span> <span data-cfg="businessName">M. Rebecca Rivera Notary Services</span>. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -726,12 +685,15 @@
            EDIT THESE DETAILS. They fill in everywhere on the page.
            ============================================================ */
         const CONFIG = {
-            ownerName:        "[Your Name]",
+            ownerName:        "M. Rebecca Rivera",
+            greetingName:     "Rebecca",
+            businessName:     "M. Rebecca Rivera Notary Services",
+            photoUrl:         "",            // her photo is built into the page; put a file name here only to swap in a different one
             phoneDisplay:     "(000) 000-0000",
             phoneDial:        "",            // digits only, e.g. "9195551234". Leave blank until real.
             email:            "you@example.com",
             serviceArea:      "[Your city] & nearby counties",
-            hoursWeekday:     "Weekday evenings after 5:30 PM",
+            hoursWeekday:     "weekday evenings after 5:30 PM",
             hoursWeekend:     "Saturdays & Sundays by appointment",
             commissionCounty: "[County]",
             commissionExpires:"[date]",
@@ -763,6 +725,21 @@
                 if (CONFIG.email && !/example\.com$/.test(CONFIG.email)) a.setAttribute('href', 'mailto:' + CONFIG.email);
             });
             $('year').textContent = new Date().getFullYear();
+
+            // Photo in the floral wreath, or her initials if none yet
+            const initials = String(CONFIG.ownerName || '').split(/\s+/).filter(w => /[A-Za-z]/.test(w))
+                .map(w => w.replace(/[^A-Za-z]/g, '')[0]).filter(Boolean);
+            $('owner-initials').textContent = (initials[0] || '') + (initials.length > 1 ? initials[initials.length - 1] : '');
+            const img = $('owner-photo');
+            if (CONFIG.photoUrl) img.src = CONFIG.photoUrl;
+            if (img.getAttribute('src')) {
+                img.alt = 'Photo of ' + CONFIG.ownerName;
+                img.classList.remove('hidden');
+                $('owner-initials').classList.add('hidden');
+            } else {
+                img.classList.add('hidden');
+                $('owner-initials').classList.remove('hidden');
+            }
 
             // Don't let people pick a date in the past
             const d = new Date();
@@ -826,7 +803,6 @@
             copy('q-name', 'f-name');
             copy('q-phone', 'f-phone');
             $('f-source').value = 'Website form (quick start)';
-            // Focus the first required field that's still empty
             const order = ['f-name', 'f-phone', 'f-date', 'f-time', 'f-location'];
             const next = order.find(id => !$(id).value.trim()) || 'f-email';
             goToBooking(next);
