@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Notary Public | North Carolina | Evenings &amp; Weekends</title>
+    <meta name="description" content="Commissioned North Carolina mobile notary. Evening and weekend appointments at your home, hospital, care facility, or office. State-capped fees.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        if (window.tailwind) tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 800: '#1b2a4a', 900: '#0f172a', 950: '#0a0f1d' },
+                        gold: { 500: '#c59b27', 600: '#a37f1e' }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Merriweather', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-navy-800 selection:text-white">
+
+    <!--
+    ================================================================
+      EDIT HER DETAILS IN ONE PLACE: the CONFIG block near the bottom
+      of this file (search for "const CONFIG"). Name, phone, email,
+      hours, service area, mileage rate and the form's web address
+      all live there and fill in across the whole page.
+    ================================================================
+    -->
+
+    <!-- Top Bar -->
+    <div class="bg-navy-950 text-slate-300 text-xs sm:text-sm py-2 px-4 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span class="font-medium text-slate-200">Commissioned Notary Public &middot; North Carolina</span>
+                <span class="hidden md:inline text-slate-500">|</span>
+                <span class="hidden md:inline">Evenings &amp; weekends by appointment</span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a data-tel href="#book" class="hover:text-amber-400 transition flex items-center gap-1.5 font-medium">
+                    <i class="fa-solid fa-phone text-xs" aria-hidden="true"></i> <span data-cfg="phoneDisplay">(000) 000-0000</span>
+                </a>
+                <a data-mailto href="#book" class="hover:text-amber-400 transition flex items-center gap-1.5 font-medium">
+                    <i class="fa-solid fa-envelope text-xs" aria-hidden="true"></i> Email me
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#top" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center text-xl font-bold shadow-md group-hover:bg-navy-800 transition">
+                    <i class="fa-solid fa-stamp" aria-hidden="true"></i>
+                </div>
+                <div>
+                    <span class="block font-serif text-lg font-bold text-navy-900 leading-tight" data-cfg="ownerName">[Your Name]</span>
+                    <span class="block text-xs text-slate-500 font-medium tracking-wide">Mobile Notary Public &middot; NC</span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-700" aria-label="Main">
+                <a href="#services" class="hover:text-navy-900 transition">Services</a>
+                <a href="#fee-schedule" class="hover:text-navy-900 transition">Fees</a>
+                <a href="#calculator" class="hover:text-navy-900 transition">Fee Calculator</a>
+                <a href="#about" class="hover:text-navy-900 transition">About</a>
+                <a href="#how-it-works" class="hover:text-navy-900 transition">How It Works</a>
+            </nav>
+
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#calculator" class="text-xs font-semibold uppercase tracking-wider text-navy-900 border border-navy-900/20 hover:bg-slate-100 px-4 py-2.5 rounded-lg transition">
+                    Estimate Fee
+                </a>
+                <a href="#book" class="bg-navy-900 hover:bg-navy-800 text-amber-400 font-medium text-sm px-5 py-2.5 rounded-lg shadow hover:shadow-md transition flex items-center gap-2">
+                    <i class="fa-regular fa-calendar-check text-xs" aria-hidden="true"></i>
+                    Request Appointment
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" type="button" class="lg:hidden p-2 rounded-md text-slate-700 hover:bg-slate-100" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Services</a>
+            <a href="#fee-schedule" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Fees</a>
+            <a href="#calculator" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">Fee Calculator</a>
+            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">About</a>
+            <a href="#how-it-works" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-50">How It Works</a>
+            <div class="pt-2 flex flex-col gap-2">
+                <a href="#book" class="w-full text-center bg-navy-900 text-amber-400 font-medium px-4 py-3 rounded-lg shadow">Request Appointment</a>
+                <a data-tel href="#book" class="w-full text-center border border-navy-900/20 text-navy-900 font-medium px-4 py-3 rounded-lg">Call or Text</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="top" class="relative bg-gradient-to-b from-navy-950 via-navy-900 to-slate-900 text-white py-16 lg:py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-amber-300 text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                        Commissioned North Carolina Notary Public
+                    </div>
+
+                    <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
+                        A Mobile Notary Who Comes to You, Evenings &amp; Weekends
+                    </h1>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        I travel to homes, hospitals, care facilities, and offices across <span data-cfg="serviceArea">[your service area]</span>, when banks and offices are closed.
+                    </p>
+
+                    <div class="pt-2 pb-4 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
+                        <div class="p-3 rounded-lg bg-white/5 border border-white/10">
+                            <i class="fa-solid fa-car text-amber-400 mb-1 text-lg" aria-hidden="true"></i>
+                            <div class="text-xs font-semibold text-white">Mobile</div>
+                            <div class="text-[11px] text-slate-300">I come to you</div>
+                        </div>
+                        <div class="p-3 rounded-lg bg-white/5 border border-white/10">
+                            <i class="fa-solid fa-moon text-amber-400 mb-1 text-lg" aria-hidden="true"></i>
+                            <div class="text-xs font-semibold text-white">After Hours</div>
+                            <div class="text-[11px] text-slate-300">Evenings &amp; weekends</div>
+                        </div>
+                        <div class="p-3 rounded-lg bg-white/5 border border-white/10">
+                            <i class="fa-solid fa-scale-balanced text-amber-400 mb-1 text-lg" aria-hidden="true"></i>
+                            <div class="text-xs font-semibold text-white">State-Set Fees</div>
+                            <div class="text-[11px] text-slate-300">$10 per signature</div>
+                        </div>
+                        <div class="p-3 rounded-lg bg-white/5 border border-white/10">
+                            <i class="fa-solid fa-id-card text-amber-400 mb-1 text-lg" aria-hidden="true"></i>
+                            <div class="text-xs font-semibold text-white">ID Verified</div>
+                            <div class="text-[11px] text-slate-300">Every signer</div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#book" class="w-full sm:w-auto text-center bg-amber-500 hover:bg-amber-400 text-slate-950 font-semibold px-7 py-3.5 rounded-lg shadow-lg hover:shadow-xl transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-calendar-plus" aria-hidden="true"></i>
+                            Request Appointment
+                        </a>
+                        <a data-tel href="#book" class="w-full sm:w-auto text-center bg-white/10 hover:bg-white/15 text-white font-medium border border-white/20 px-6 py-3.5 rounded-lg transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                            Call or Text <span data-cfg="phoneDisplay">(000) 000-0000</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick start card: fills in the full request form below -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white text-slate-900 rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-200">
+                        <div class="border-b border-slate-100 pb-4 mb-6">
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-700 block mb-1">Quick Start</span>
+                            <h2 class="font-serif text-2xl font-bold text-navy-900">Need a Notary Soon?</h2>
+                            <p class="text-xs text-slate-500 mt-1">Start here. You'll review your details and send them on the next step.</p>
+                        </div>
+
+                        <form id="hero-quick-form" class="space-y-4" novalidate>
+                            <div>
+                                <label for="q-doc" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Document Type</label>
+                                <select id="q-doc" class="w-full border border-slate-400 rounded-lg px-3.5 py-2.5 text-sm text-slate-800 focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                                    <option value="Power of Attorney">Power of Attorney</option>
+                                    <option value="Healthcare Directive / Living Will">Healthcare Directive / Living Will</option>
+                                    <option value="Vehicle Title Transfer">Vehicle Title Transfer</option>
+                                    <option value="Affidavit / Sworn Statement">Affidavit / Sworn Statement</option>
+                                    <option value="Travel Consent for a Minor">Travel Consent for a Minor</option>
+                                    <option value="Other">Something Else</option>
+                                </select>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label for="q-date" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Preferred Date</label>
+                                    <input id="q-date" type="date" class="js-min-today w-full border border-slate-400 rounded-lg px-3 py-2 text-sm text-slate-800 focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label for="q-loc" class="block text-xs font-semibold text-slate-700 uppercase mb-1">City or Zip</label>
+                                    <input id="q-loc" type="text" placeholder="City or zip" class="w-full border border-slate-400 rounded-lg px-3 py-2 text-sm text-slate-800 focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label for="q-name" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Your Name</label>
+                                    <input id="q-name" type="text" autocomplete="name" class="w-full border border-slate-400 rounded-lg px-3 py-2 text-sm text-slate-800 focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                                </div>
+                                <div>
+                                    <label for="q-phone" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Phone</label>
+                                    <input id="q-phone" type="tel" autocomplete="tel" class="w-full border border-slate-400 rounded-lg px-3 py-2 text-sm text-slate-800 focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full bg-navy-900 hover:bg-navy-800 text-amber-400 font-semibold py-3 rounded-lg transition shadow-md flex items-center justify-center gap-2">
+                                <span>Continue</span>
+                                <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="bg-amber-50 border-y border-amber-200/60 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-around gap-6 text-center text-slate-700 text-sm">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-building-columns text-navy-900 text-lg" aria-hidden="true"></i>
+                    <span class="font-medium">Commissioned by the NC Secretary of State</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-id-card text-navy-900 text-lg" aria-hidden="true"></i>
+                    <span class="font-medium">Photo ID checked for every signer</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-book text-navy-900 text-lg" aria-hidden="true"></i>
+                    <span class="font-medium">Every act recorded in my notary journal</span>
+                </div>
+                <!-- If she buys errors & omissions insurance, add a line here, e.g. "$__ E&O insured". Only list what is true. -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-amber-700 mb-2">Services</h2>
+                <p class="font-serif text-3xl sm:text-4xl font-bold text-navy-900">Who I Help</p>
+                <div class="w-16 h-1 bg-amber-500 mx-auto my-4 rounded-full"></div>
+                <p class="text-slate-600">Most of my appointments are for people who can't easily get to a notary during the workday.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 transition duration-200 hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center text-xl mb-5 shadow"><i class="fa-solid fa-signature" aria-hidden="true"></i></div>
+                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">General Notarizations</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Personal, business, and out-of-state documents that need a notary's certificate.</p>
+                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Acknowledgments</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Jurats &amp; verifications</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Oaths &amp; affirmations</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 flex justify-between items-center text-sm">
+                        <span class="font-semibold text-slate-600">Fee:</span>
+                        <span class="font-bold text-navy-900">$10 per signature</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 transition duration-200 hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center text-xl mb-5 shadow"><i class="fa-solid fa-hospital" aria-hidden="true"></i></div>
+                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Hospitals &amp; Care Facilities</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Bedside visits for patients and residents, with time to make sure every signer is ready.</p>
+                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Hospitals &amp; rehab centers</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Nursing homes &amp; assisted living</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Homebound clients</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 flex justify-between items-center text-sm">
+                        <span class="font-semibold text-slate-600">Travel:</span>
+                        <span class="font-bold text-navy-900">Mileage, agreed in advance</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 transition duration-200 hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center text-xl mb-5 shadow"><i class="fa-solid fa-file-medical" aria-hidden="true"></i></div>
+                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Powers of Attorney &amp; Healthcare Documents</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Notarizing the documents your attorney or family has already prepared.</p>
+                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Powers of attorney</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Healthcare powers of attorney</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Living wills</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 flex justify-between items-center text-sm">
+                        <span class="font-semibold text-slate-600">Fee:</span>
+                        <span class="font-bold text-navy-900">$10 per signature</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 transition duration-200 hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center text-xl mb-5 shadow"><i class="fa-solid fa-car-side" aria-hidden="true"></i></div>
+                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Vehicle Title Transfers</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">Selling a car privately? I'll meet you and the buyer to notarize the title.</p>
+                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Private car sales</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Small dealers</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Evening &amp; weekend meetups</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 flex justify-between items-center text-sm">
+                        <span class="font-semibold text-slate-600">Fee:</span>
+                        <span class="font-bold text-navy-900">$10 per signature</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 transition duration-200 hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center text-xl mb-5 shadow"><i class="fa-solid fa-file-contract" aria-hidden="true"></i></div>
+                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Affidavits &amp; Everyday Documents</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">The paperwork life throws at you, handled on your schedule.</p>
+                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Affidavits &amp; sworn statements</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Travel consent for minors</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Letters &amp; forms</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 flex justify-between items-center text-sm">
+                        <span class="font-semibold text-slate-600">Fee:</span>
+                        <span class="font-bold text-navy-900">$10 per signature</span>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 transition duration-200 hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-navy-900 text-amber-400 flex items-center justify-center text-xl mb-5 shadow"><i class="fa-solid fa-briefcase" aria-hidden="true"></i></div>
+                        <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Small Businesses</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">After-hours visits for paperwork your team needs notarized.</p>
+                        <ul class="text-sm text-slate-700 space-y-2 mb-6">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> HR &amp; employment forms</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Vendor &amp; licensing paperwork</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-700" aria-hidden="true"></i> Several signers in one visit</li>
+                        </ul>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 flex justify-between items-center text-sm">
+                        <span class="font-semibold text-slate-600">Fee:</span>
+                        <span class="font-bold text-navy-900">$10 per signature</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Fees + Calculator -->
+    <section id="fee-schedule" class="py-16 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+
+                <div class="lg:col-span-6 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-amber-700 block mb-1">Simple, Transparent Fees</span>
+                        <h2 class="font-serif text-3xl font-bold text-navy-900">North Carolina Fee Schedule</h2>
+                        <div class="w-12 h-1 bg-amber-500 my-3 rounded-full"></div>
+                    </div>
+
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        North Carolina law (<strong>N.C. Gen. Stat. &sect; 10B-31</strong>) sets the most a notary may charge. I never charge more, and you'll approve the total, including any mileage, in writing before I travel.
+                    </p>
+
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                        <table class="w-full text-left text-xs sm:text-sm">
+                            <thead class="bg-navy-900 text-white font-semibold uppercase text-[11px] tracking-wider">
+                                <tr>
+                                    <th scope="col" class="py-3 px-4">Notarial Act</th>
+                                    <th scope="col" class="py-3 px-4 text-right">Fee</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-100 font-medium text-slate-700">
+                                <tr>
+                                    <td class="py-3 px-4">Acknowledgment (per principal signature)</td>
+                                    <td class="py-3 px-4 text-right font-bold text-navy-900">$10.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Jurat, verification or proof (per principal signature)</td>
+                                    <td class="py-3 px-4 text-right font-bold text-navy-900">$10.00</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Oath or affirmation without a signature (per person)</td>
+                                    <td class="py-3 px-4 text-right font-bold text-navy-900">$10.00</td>
+                                </tr>
+                                <tr class="bg-slate-50">
+                                    <td class="py-3 px-4 text-slate-600 font-normal">Travel: actual mileage at the federal business rate, only if agreed in writing before I travel</td>
+                                    <td class="py-3 px-4 text-right font-bold text-slate-700 whitespace-nowrap"><span data-cfg="mileageRateDisplay">72.5&cent;</span> / mile</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bg-amber-50 border border-amber-300/70 rounded-lg p-4 text-sm text-amber-950 space-y-1">
+                        <div class="font-bold flex items-center gap-1.5">
+                            <i class="fa-solid fa-circle-info text-amber-700" aria-hidden="true"></i>
+                            Notice
+                        </div>
+                        <p class="leading-normal">
+                            I am not an attorney licensed to practice law in North Carolina, and I may not give legal advice or accept fees for legal advice. I can't help you choose, prepare, or explain a document. Please consult a licensed attorney for that.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="calculator" class="lg:col-span-6 bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-slate-200 scroll-mt-24">
+                    <div class="flex items-center gap-3 border-b border-slate-100 pb-4 mb-6">
+                        <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-700 flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-calculator" aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-xl font-bold text-navy-900">Fee Estimator</h3>
+                            <p class="text-xs text-slate-500">A quick estimate. I'll confirm your exact total before the visit.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label for="calc-signatures" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Notarized Signatures</label>
+                                <input type="number" id="calc-signatures" value="1" min="1" max="50" inputmode="numeric" class="w-full border border-slate-400 rounded-lg px-3.5 py-2.5 text-sm text-slate-800 focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                            </div>
+                            <div>
+                                <label for="calc-miles" class="block text-xs font-semibold text-slate-700 uppercase mb-1">Travel Miles</label>
+                                <input type="number" id="calc-miles" value="0" min="0" max="300" inputmode="decimal" class="w-full border border-slate-400 rounded-lg px-3.5 py-2.5 text-sm text-slate-800 focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                            </div>
+                        </div>
+
+                        <label class="inline-flex items-center gap-2 cursor-pointer pt-1">
+                            <input type="checkbox" id="calc-travel-toggle" checked class="rounded text-navy-900 focus:ring-navy-800 h-4 w-4">
+                            <span class="text-sm font-medium text-slate-700">I need you to travel to me</span>
+                        </label>
+
+                        <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 space-y-2 text-sm" aria-live="polite">
+                            <div class="flex justify-between text-slate-600">
+                                <span>Notary fees:</span>
+                                <span id="out-act-fee" class="font-semibold text-slate-800">$10.00</span>
+                            </div>
+                            <div class="flex justify-between text-slate-600">
+                                <span>Estimated mileage:</span>
+                                <span id="out-travel-fee" class="font-semibold text-slate-800">$0.00</span>
+                            </div>
+                            <div class="border-t border-slate-200 pt-2 flex justify-between items-center">
+                                <span class="font-bold text-navy-900">Estimated total:</span>
+                                <span id="out-total-fee" class="font-serif text-2xl font-bold text-amber-700">$10.00</span>
+                            </div>
+                        </div>
+
+                        <button type="button" id="use-estimate-btn" class="w-full text-center bg-navy-900 hover:bg-navy-800 text-amber-400 font-semibold py-3 rounded-lg shadow transition block">
+                            Use This Estimate &amp; Request a Visit
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+                <div class="lg:col-span-5 relative">
+                    <div class="bg-navy-900 text-white rounded-2xl p-8 shadow-xl relative z-10 space-y-6">
+                        <div class="inline-block p-3 rounded-xl bg-amber-500 text-navy-950 font-bold text-xl">
+                            <i class="fa-solid fa-stamp" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold"><span data-cfg="ownerName">[Your Name]</span>, Notary Public</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Serving families, care facilities, and small businesses across <span data-cfg="serviceArea">[your service area]</span>.
+                        </p>
+                        <div class="space-y-3 pt-2 text-sm">
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-400 text-base" aria-hidden="true"></i><span>Commissioned in <span data-cfg="commissionCounty">[County]</span> County, NC</span></div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-400 text-base" aria-hidden="true"></i><span><span data-cfg="hoursWeekday">Weekday evenings</span></span></div>
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-amber-400 text-base" aria-hidden="true"></i><span><span data-cfg="hoursWeekend">Weekends by appointment</span></span></div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 w-full h-full bg-amber-400/20 rounded-2xl"></div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-700 block">About</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900">Careful, Patient, and On Time</h2>
+                    <div class="w-16 h-1 bg-amber-500 rounded-full"></div>
+
+                    <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                        A notarization protects you against fraud and forgery. That's why I check every signer's identification, make sure they're signing willingly, and record each notarization in my journal.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                        Whether it's paperwork at a kitchen table or an urgent healthcare document at a hospital bedside, I take the time to get it right and treat every family with respect.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                        <div class="border border-slate-200 rounded-lg p-4 bg-slate-50">
+                            <div class="font-bold text-navy-900 text-sm mb-1 flex items-center gap-2"><i class="fa-solid fa-id-card text-amber-700" aria-hidden="true"></i> Careful ID Checks</div>
+                            <p class="text-sm text-slate-600">A current government-issued photo ID for every signer, such as a driver's license, passport, or military ID.</p>
+                        </div>
+                        <div class="border border-slate-200 rounded-lg p-4 bg-slate-50">
+                            <div class="font-bold text-navy-900 text-sm mb-1 flex items-center gap-2"><i class="fa-solid fa-book" aria-hidden="true"></i> Notary Journal</div>
+                            <p class="text-sm text-slate-600">Every notarization is recorded, for your protection and mine.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex flex-wrap gap-4 items-center">
+                        <a href="#book" class="bg-navy-900 hover:bg-navy-800 text-amber-400 font-semibold px-6 py-3 rounded-lg shadow transition text-sm">Request Appointment</a>
+                        <a data-tel href="#book" class="text-navy-900 font-semibold text-sm hover:underline flex items-center gap-2"><i class="fa-solid fa-phone" aria-hidden="true"></i> Call or Text</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-wider text-amber-700 mb-2">How It Works</h2>
+                <p class="font-serif text-3xl sm:text-4xl font-bold text-navy-900">Four Simple Steps</p>
+                <div class="w-16 h-1 bg-amber-500 mx-auto my-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl p-6 border border-slate-200 text-center shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-navy-900 text-amber-400 font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow">1</div>
+                    <h3 class="font-serif font-bold text-lg text-navy-900 mb-2">Request</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Send the form below, or call or text. Tell me the document, number of signers, and where you'll be.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-slate-200 text-center shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-navy-900 text-amber-400 font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow">2</div>
+                    <h3 class="font-serif font-bold text-lg text-navy-900 mb-2">Confirm</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">I'll reach out to confirm a time and send your total, including mileage, in writing.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-slate-200 text-center shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-navy-900 text-amber-400 font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow">3</div>
+                    <h3 class="font-serif font-bold text-lg text-navy-900 mb-2">Prepare</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">Have your unsigned document, every signer, and a current photo ID for each signer ready.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-slate-200 text-center shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-navy-900 text-amber-400 font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow">4</div>
+                    <h3 class="font-serif font-bold text-lg text-navy-900 mb-2">Sign &amp; Seal</h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">You sign in front of me, and I complete the notarial certificate, apply my seal, and record it in my journal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking form -->
+    <section id="book" class="py-20 bg-white scroll-mt-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-50 rounded-2xl p-6 sm:p-10 border border-slate-200 shadow-xl">
+
+                <div class="text-center mb-8">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-700 block mb-1">Request an Appointment</span>
+                    <h2 class="font-serif text-3xl font-bold text-navy-900">Tell Me What You Need</h2>
+                    <p class="text-sm text-slate-600 mt-2">I'll reply to confirm your time and total. For same-day help, calling or texting <a data-tel href="#book" class="font-semibold text-navy-900 underline"><span data-cfg="phoneDisplay">(000) 000-0000</span></a> is fastest.</p>
+                </div>
+
+                <div id="booking-success" class="hidden mb-6 p-4 bg-emerald-50 border border-emerald-300 rounded-lg text-emerald-900 text-sm" role="status" tabindex="-1">
+                    <div class="flex items-start gap-2">
+                        <i class="fa-solid fa-circle-check text-emerald-700 text-lg mt-0.5" aria-hidden="true"></i>
+                        <div>
+                            <strong>Thank you, your request was sent.</strong>
+                            <span id="booking-success-id"></span>
+                            This is a request, not a confirmed appointment yet. I'll contact you to confirm the time and total.
+                        </div>
+                    </div>
+                </div>
+
+                <div id="booking-error" class="hidden mb-6 p-4 bg-red-50 border border-red-300 rounded-lg text-red-900 text-sm" role="alert" tabindex="-1">
+                    <div class="flex items-start gap-2">
+                        <i class="fa-solid fa-triangle-exclamation text-red-700 text-lg mt-0.5" aria-hidden="true"></i>
+                        <div>
+                            <strong>Sorry, your request didn't go through.</strong>
+                            Please call or text <a data-tel href="#book" class="font-semibold underline"><span data-cfg="phoneDisplay">(000) 000-0000</span></a> and I'll get you scheduled.
+                        </div>
+                    </div>
+                </div>
+
+                <form id="booking-form" class="space-y-6">
+                    <!-- Spam trap: hidden from people, bots fill it in -->
+                    <div class="hidden" aria-hidden="true">
+                        <label for="f-website">Leave this empty</label>
+                        <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+                    <input type="hidden" id="f-estimate" name="estimate" value="">
+                    <input type="hidden" id="f-source" name="source" value="Website form">
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="f-name" class="block text-xs font-bold text-slate-700 uppercase mb-2">Full Name *</label>
+                            <input id="f-name" name="name" type="text" required autocomplete="name" class="w-full border border-slate-400 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="f-phone" class="block text-xs font-bold text-slate-700 uppercase mb-2">Phone Number *</label>
+                            <input id="f-phone" name="phone" type="tel" required autocomplete="tel" class="w-full border border-slate-400 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="f-email" class="block text-xs font-bold text-slate-700 uppercase mb-2">Email <span class="font-normal normal-case text-slate-500">(optional, for a copy of your request)</span></label>
+                            <input id="f-email" name="email" type="email" autocomplete="email" class="w-full border border-slate-400 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="f-doc" class="block text-xs font-bold text-slate-700 uppercase mb-2">Document Type *</label>
+                            <select id="f-doc" name="documentType" required class="w-full border border-slate-400 rounded-lg px-4 py-3 text-sm bg-white focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                                <option value="">Select one</option>
+                                <option value="Power of Attorney">Power of Attorney</option>
+                                <option value="Healthcare Directive / Living Will">Healthcare Directive / Living Will</option>
+                                <option value="Vehicle Title Transfer">Vehicle Title Transfer</option>
+                                <option value="Affidavit / Sworn Statement">Affidavit / Sworn Statement</option>
+                                <option value="Travel Consent for a Minor">Travel Consent for a Minor</option>
+                                <option value="Business Documents">Business Documents</option>
+                                <option value="Other">Something Else</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div>
+                            <label for="f-signers" class="block text-xs font-bold text-slate-700 uppercase mb-2">Number of Signers *</label>
+                            <input id="f-signers" name="signers" type="number" min="1" max="50" value="1" required inputmode="numeric" class="w-full border border-slate-400 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="f-date" class="block text-xs font-bold text-slate-700 uppercase mb-2">Preferred Date *</label>
+                            <input id="f-date" name="preferredDate" type="date" required class="js-min-today w-full border border-slate-400 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                        </div>
+                        <div>
+                            <label for="f-time" class="block text-xs font-bold text-slate-700 uppercase mb-2">Preferred Time *</label>
+                            <select id="f-time" name="preferredTime" required class="w-full border border-slate-400 rounded-lg px-4 py-3 text-sm bg-white focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                                <option value="">Select one</option>
+                                <option value="Weekday evening">Weekday evening</option>
+                                <option value="Saturday">Saturday</option>
+                                <option value="Sunday">Sunday</option>
+                                <option value="Flexible">I'm flexible</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="f-location" class="block text-xs font-bold text-slate-700 uppercase mb-2">Where Should I Meet You? *</label>
+                        <input id="f-location" name="location" type="text" required placeholder="Address, or hospital/facility name and city" class="w-full border border-slate-400 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-navy-800 focus:outline-none">
+                    </div>
+
+                    <div>
+                        <label for="f-notes" class="block text-xs font-bold text-slate-700 uppercase mb-2">Anything Else I Should Know?</label>
+                        <textarea id="f-notes" name="notes" rows="3" placeholder="Room number, parking, number of documents, accessibility needs..." class="w-full border border-slate-400 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-navy-800 focus:outline-none"></textarea>
+                    </div>
+
+                    <p id="estimate-note" class="hidden text-sm text-slate-700 bg-white border border-slate-200 rounded-lg px-4 py-3"></p>
+
+                    <button type="submit" id="booking-submit" class="w-full bg-navy-900 hover:bg-navy-800 disabled:opacity-60 disabled:cursor-wait text-amber-400 font-bold py-4 rounded-lg shadow-lg hover:shadow-xl transition text-center flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                        <span id="booking-submit-label">Send Request</span>
+                    </button>
+
+                    <p class="text-xs text-slate-500 text-center">
+                        <i class="fa-solid fa-user-shield mr-1" aria-hidden="true"></i> Your information is only used to schedule your appointment.
+                    </p>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded bg-amber-500 text-navy-950 flex items-center justify-center font-bold text-lg"><i class="fa-solid fa-stamp" aria-hidden="true"></i></div>
+                        <span class="font-serif text-lg font-bold text-white" data-cfg="ownerName">[Your Name]</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">Mobile notary public serving <span data-cfg="serviceArea">[your service area]</span>, evenings and weekends.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Navigation</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#services" class="hover:text-amber-400 transition">Services</a></li>
+                        <li><a href="#fee-schedule" class="hover:text-amber-400 transition">Fees</a></li>
+                        <li><a href="#calculator" class="hover:text-amber-400 transition">Fee Estimator</a></li>
+                        <li><a href="#about" class="hover:text-amber-400 transition">About</a></li>
+                        <li><a href="#book" class="hover:text-amber-400 transition">Request Appointment</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-3">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-amber-400" aria-hidden="true"></i><a data-tel href="#book" class="hover:text-white transition"><span data-cfg="phoneDisplay">(000) 000-0000</span></a></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-envelope text-amber-400" aria-hidden="true"></i><a data-mailto href="#book" class="hover:text-white transition break-all"><span data-cfg="email">you@example.com</span></a></li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-amber-400" aria-hidden="true"></i><span data-cfg="serviceArea">[your service area]</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-3">State Notice</h4>
+                    <p class="text-xs leading-relaxed font-semibold text-slate-200">I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN NORTH CAROLINA, AND I MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.</p>
+                    <p class="text-xs leading-relaxed mt-2">Commissioned in <span data-cfg="commissionCounty">[County]</span> County, NC. Commission expires <span data-cfg="commissionExpires">[date]</span>.</p>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-6 text-center text-xs text-slate-400">
+                <p>&copy; <span id="year"></span> <span data-cfg="ownerName">[Your Name]</span>, Notary Public. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* ============================================================
+           EDIT THESE DETAILS. They fill in everywhere on the page.
+           ============================================================ */
+        const CONFIG = {
+            ownerName:        "[Your Name]",
+            phoneDisplay:     "(000) 000-0000",
+            phoneDial:        "",            // digits only, e.g. "9195551234". Leave blank until real.
+            email:            "you@example.com",
+            serviceArea:      "[Your city] & nearby counties",
+            hoursWeekday:     "Weekday evenings after 5:30 PM",
+            hoursWeekend:     "Saturdays & Sundays by appointment",
+            commissionCounty: "[County]",
+            commissionExpires:"[date]",
+            feePerSignature:  10,
+            mileageRate:      0.725,         // IRS 2026 business rate, $/mile. Update each January.
+            // Paste the Google Apps Script web app URL here (see setup steps):
+            formEndpoint:     "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE"
+        };
+        /* ============================================================ */
+
+        const PAGE_LOADED_AT = Date.now();
+        const $ = (id) => document.getElementById(id);
+        const money = (n) => '$' + n.toFixed(2);
+
+        // ---- Fill in her details everywhere ----
+        function applyConfig() {
+            const derived = Object.assign({}, CONFIG, {
+                mileageRateDisplay: (CONFIG.mileageRate * 100).toFixed(1).replace(/\.0$/, '') + '¢'
+            });
+            document.querySelectorAll('[data-cfg]').forEach(el => {
+                const key = el.getAttribute('data-cfg');
+                if (derived[key] !== undefined && derived[key] !== '') el.textContent = derived[key];
+            });
+            const dial = String(CONFIG.phoneDial || '').replace(/[^\d+]/g, '');
+            document.querySelectorAll('[data-tel]').forEach(a => {
+                if (dial) a.setAttribute('href', 'tel:' + dial);
+            });
+            document.querySelectorAll('[data-mailto]').forEach(a => {
+                if (CONFIG.email && !/example\.com$/.test(CONFIG.email)) a.setAttribute('href', 'mailto:' + CONFIG.email);
+            });
+            $('year').textContent = new Date().getFullYear();
+
+            // Don't let people pick a date in the past
+            const d = new Date();
+            const today = new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+            document.querySelectorAll('.js-min-today').forEach(inp => inp.setAttribute('min', today));
+        }
+
+        // ---- Mobile menu ----
+        function setupMenu() {
+            const btn = $('mobile-menu-btn');
+            const menu = $('mobile-menu');
+            btn.addEventListener('click', () => {
+                const open = menu.classList.toggle('hidden') === false;
+                btn.setAttribute('aria-expanded', String(open));
+                btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            });
+            menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-label', 'Open menu');
+            }));
+        }
+
+        // ---- Fee estimator ----
+        function readEstimate() {
+            const sigs = Math.max(1, Math.min(50, parseInt($('calc-signatures').value, 10) || 1));
+            const miles = Math.max(0, Math.min(300, parseFloat($('calc-miles').value) || 0));
+            const travel = $('calc-travel-toggle').checked;
+            const act = sigs * CONFIG.feePerSignature;
+            const trav = travel ? Math.round(miles * CONFIG.mileageRate * 100) / 100 : 0;
+            return { sigs, miles, travel, act, trav, total: act + trav };
+        }
+
+        function calculateFee() {
+            const e = readEstimate();
+            $('out-act-fee').textContent = money(e.act);
+            $('out-travel-fee').textContent = money(e.trav);
+            $('out-total-fee').textContent = money(e.total);
+            $('calc-miles').disabled = !e.travel;
+        }
+
+        function useEstimate() {
+            const e = readEstimate();
+            const summary = `${e.sigs} signature(s) = ${money(e.act)}` +
+                (e.travel ? ` + about ${e.miles} miles = ${money(e.trav)}` : ', no travel') +
+                `; estimated total ${money(e.total)}`;
+            $('f-estimate').value = summary;
+            const note = $('estimate-note');
+            note.textContent = 'Your estimate: ' + summary + '. I’ll confirm the exact total with you before the visit.';
+            note.classList.remove('hidden');
+            goToBooking('f-name');
+        }
+
+        // ---- Quick start card: carry details into the full form ----
+        function continueFromHero(ev) {
+            ev.preventDefault();
+            const copy = (from, to) => { const v = $(from).value.trim(); if (v) $(to).value = v; };
+            $('f-doc').value = $('q-doc').value;
+            copy('q-date', 'f-date');
+            copy('q-loc', 'f-location');
+            copy('q-name', 'f-name');
+            copy('q-phone', 'f-phone');
+            $('f-source').value = 'Website form (quick start)';
+            // Focus the first required field that's still empty
+            const order = ['f-name', 'f-phone', 'f-date', 'f-time', 'f-location'];
+            const next = order.find(id => !$(id).value.trim()) || 'f-email';
+            goToBooking(next);
+        }
+
+        function goToBooking(focusId) {
+            $('book').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setTimeout(() => { const el = $(focusId); if (el) el.focus({ preventScroll: true }); }, 600);
+        }
+
+        // ---- Send the request ----
+        function endpointReady() {
+            return /^https:\/\/script\.google\.com\/macros\/s\/.+\/exec$/.test(CONFIG.formEndpoint || '');
+        }
+
+        async function handleFormSubmit(ev) {
+            ev.preventDefault();
+            const form = $('booking-form');
+            const ok = $('booking-success');
+            const err = $('booking-error');
+            ok.classList.add('hidden');
+            err.classList.add('hidden');
+
+            if (!form.reportValidity()) return;
+
+            const fd = new FormData(form);
+            const payload = Object.fromEntries(fd.entries());
+            payload.elapsedMs = Date.now() - PAGE_LOADED_AT;
+            payload.page = location.href;
+
+            if (!endpointReady()) {
+                console.warn('Form endpoint not set. Paste the Apps Script web app URL into CONFIG.formEndpoint.');
+                err.classList.remove('hidden');
+                err.focus();
+                return;
+            }
+
+            const btn = $('booking-submit');
+            const label = $('booking-submit-label');
+            btn.disabled = true;
+            label.textContent = 'Sending…';
+
+            try {
+                const res = await fetch(CONFIG.formEndpoint, {
+                    method: 'POST',
+                    // text/plain avoids a CORS preflight, which Apps Script can't answer
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                    body: JSON.stringify(payload)
+                });
+                const out = await res.json();
+                if (!out.ok) throw new Error(out.error || 'Request failed');
+
+                $('booking-success-id').textContent = out.id ? `Your request number is ${out.id}.` : '';
+                form.reset();
+                $('f-estimate').value = '';
+                $('estimate-note').classList.add('hidden');
+                $('f-source').value = 'Website form';
+                ok.classList.remove('hidden');
+                ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                ok.focus({ preventScroll: true });
+            } catch (e) {
+                console.error(e);
+                err.classList.remove('hidden');
+                err.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                err.focus({ preventScroll: true });
+            } finally {
+                btn.disabled = false;
+                label.textContent = 'Send Request';
+            }
+        }
+
+        // ---- Wire everything up ----
+        applyConfig();
+        setupMenu();
+        ['calc-signatures', 'calc-miles', 'calc-travel-toggle'].forEach(id => {
+            $(id).addEventListener('input', calculateFee);
+            $(id).addEventListener('change', calculateFee);
+        });
+        $('use-estimate-btn').addEventListener('click', useEstimate);
+        $('hero-quick-form').addEventListener('submit', continueFromHero);
+        $('booking-form').addEventListener('submit', handleFormSubmit);
+        calculateFee();
+    </script>
+</body>
+</html>
